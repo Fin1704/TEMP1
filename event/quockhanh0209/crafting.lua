@@ -9,7 +9,7 @@ function QK_AskCraft(nIndex)
     local nMax = QK_CalcMaxCraft(nIndex);
     if nMax <= 0 then
         Talk(1, "", "<color=red>Kh«ng ®ñ nguyªn liÖu<color> ®Ó ghÐp. H·y thu thËp thªm nguyªn liÖu tr­íc.");
-        return;
+        return
     end
 
     AskClientForNumber("QK_DoCraftCallback", 1, nMax, "NhËp sè l­îng ghÐp: (1 - " .. nMax .. ")");
@@ -32,7 +32,7 @@ function QK_DoCraft(nIndex, nCount)
     local nMax = QK_CalcMaxCraft(nIndex);
     if nMax <= 0 then
         Talk(1, "", "<color=red>Kh«ng ®ñ nguyªn liÖu<color> ®Ó ghÐp.");
-        return;
+        return
     end
 
     local nNum = nCount or nMax;
@@ -42,7 +42,7 @@ function QK_DoCraft(nIndex, nCount)
     local nCalls = 1;
     if (CalcFreeItemCell() < nCalls) then
         Talk(1, "", "CÇn Ýt nhÊt <color=red>" .. nCalls .. " « trèng<color> trong hµnh trang.");
-        return;
+        return
     end
 
     for i = 1, getn(tRecipe) do

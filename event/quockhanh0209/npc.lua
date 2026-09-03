@@ -77,7 +77,7 @@ function QK_ShowCraftDialog(nIndex)
 			getn(tBtn),
 			tBtn
 		);
-		return;
+		return
 	end
 	local tRecipe = QKLib_get(nIndex, QK_Enum_Filter.RECIPE);
 	if (not tRecipe) then return end
@@ -120,7 +120,7 @@ function QK_ShowEventBuyDialog(nIndex)
 			getn(tBtn),
 			tBtn
 		);
-		return;
+		return
 	end
 	local packageSale = QKLib_getPackageSale(nIndex)
 	if (not packageSale) then return end

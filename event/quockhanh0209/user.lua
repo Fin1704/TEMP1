@@ -62,8 +62,8 @@ function QK_IsForbiddenMap()
     return nil
 end
 
-local QK_RUONG_MANH_INI = "event\\quockhanh0209\\counterRuongManh.ini"
-local QK_RUONG_MANH_DATA = nil
+QK_RUONG_MANH_INI = "event\\quockhanh0209\\counterRuongManh.ini"
+QK_RUONG_MANH_DATA = nil
 function QK_GetRuongManhCount(szRole)
     if (szRole == nil or szRole == "") then szRole = GetName() end
     local nVal = GetIniInt(QK_RUONG_MANH_INI, "Count", szRole)
@@ -83,7 +83,7 @@ function QK_AddRuongManhCount(szRole)
 end
 
 -- Danh sach toan bo manh cua 4 bo Nhu Tinh - Hiep Cot - An Bang - Dinh Quoc
-local TB_MANH_4_BO = {
+TB_MANH_4_BO = {
     -- Nhu Tinh (32 manh: 1399..1430)
     1399, 1400, 1401, 1402, 1403, 1404, 1405, 1406,
     1407, 1408, 1409, 1410, 1411, 1412, 1413, 1414,
