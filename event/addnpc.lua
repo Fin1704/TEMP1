@@ -1,0 +1,1222 @@
+--defevspr2022file_thaydo = FileName2Id("\\script\\event\\spring2022\\thaydo.lua")
+--defevspr2022file_bep = FileName2Id("\\script\\event\\spring2022\\bep.lua")
+--defevspr2022file_thantai = FileName2Id("\\script\\event\\spring2022\\thantai.lua")
+--defevspr2022file_caymai = FileName2Id("\\script\\event\\spring2022\\caymai.lua")
+--defevspr2022file_thoghephoa = FileName2Id("\\script\\event\\wmday2022\\ghephoa.lua")
+--defevspr2022file_thouruou = FileName2Id("\\script\\event\\table2022\\uruou.lua")
+--defevspr2022file_bantiec = FileName2Id("\\script\\event\\table2022\\bantiec.lua")
+--defevspr2022file_lolua = FileName2Id("\\script\\event\\fishing\\lolua.lua")
+--defevspr2022file_tqsk = FileName2Id("\\script\\event\\fishing\\tongquan.lua")
+--defevspr2022file_tqsksm = FileName2Id("\\script\\event\\summer\\nghenhan.lua")
+--defevspr2022file_tqskmoon = FileName2Id("\\script\\event\\moon\\manager.lua")
+--defevspr2022file_tqskvnwoman = FileName2Id("\\script\\event\\vnwoman\\manager.lua")
+--defevspr2022file_tqskfootball = FileName2Id("\\script\\event\\football\\manager.lua")
+--defevspr2022file_noeltree = FileName2Id("\\script\\event\\noel\\noeltree.lua")
+--defevspr2022file_noelman = FileName2Id("\\script\\event\\noel\\noelman.lua")
+--defevspr2023file_sprtree = FileName2Id("\\script\\event\\spring2023\\springtree.lua")
+--defevspr2023file_mgr = FileName2Id("\\script\\event\\spring2023\\manager.lua")
+--defevspr2023file_cake = FileName2Id("\\script\\event\\spring2023\\cake.lua")
+--defevspr2023file_wdmgr = FileName2Id("\\script\\event\\wd83_23\\manager.lua")
+--defevspr2023file_wmbeplo = FileName2Id("\\script\\event\\wd83_23\\fire.lua")
+--defevspr2023file_wkdmgr = FileName2Id("\\script\\event\\workerday2023\\manager.lua")
+
+
+function add_eventnpc()
+	-- ExeScript(FileName2Id("\\script\\event\\01062026\\helper.lua"),0,"AddNpcEvent01062026");---- Npc sù kiÖn 0106
+	-- local nIdx =AddNpc(2354,1,53,51397,102695,FileName2Id("\\script\\event\\01062026\\npc.lua"),6,"Kh¶o nghiÖm bang héi");SetNpcTask(nIdx, 0, 2);
+	
+	-- ExeScript(FileName2Id("\\script\\event\\vulan\\helper.lua"),0,"AddNpcEventVuLan");---- Npc sù kiÖn Vu Lan
+	-- local nIdx =AddNpc(2354,1,53,51397,102695,FileName2Id("\\script\\event\\vulan\\npc.lua"),6,"Kh¶o nghiÖm bang héi");SetNpcTask(nIdx, 0, 2);
+	
+	ExeScript(FileName2Id("\\script\\event\\quockhanh0209\\helper.lua"),0,"AddNpcEventQuocKhanh");---- Npc su kien Quoc Khanh + Khao Nghiem
+	
+	AddNpc(197,1,78,51194,103203,FileName2Id("\\script\\npcs\\common\\compound.lua"),6,"Gi¸m ®Þnh quan");
+	--AddNpc(745,1,78,50079,103674,defevspr2023file_wkdmgr,6,"§¹i sø sù kiÖn")
+	--AddNpc(745,1,1,50817,102400,defevspr2023file_wkdmgr,6,"§¹i sø sù kiÖn")
+	--AddNpc(745,1,37,55809,98284,defevspr2023file_wkdmgr,6,"§¹i sø sù kiÖn")
+	--AddNpc(745,1,80,56710,97102,defevspr2023file_wkdmgr,6,"§¹i sø sù kiÖn")
+	--AddNpc(745,1,11,100334,162014,defevspr2023file_wkdmgr,6,"§¹i sø sù kiÖn")
+	--AddNpc(745,1,162,50519,100738,defevspr2023file_wkdmgr,6,"§¹i sø sù kiÖn")
+	--AddNpc(745,1,176,50338,94448,defevspr2023file_wkdmgr,6,"§¹i sø sù kiÖn")
+	
+	--AddNpc(1274,1,78,50234,103502,defevspr2023file_wmbeplo,6,"BÕp nÊu c¬m")
+	--AddNpc(1274,1,1,50913,102202,defevspr2023file_wmbeplo,6,"BÕp nÊu c¬m")
+	--AddNpc(1274,1,37,55645,98220,defevspr2023file_wmbeplo,6,"BÕp nÊu c¬m")
+	--AddNpc(1274,1,80,56506,97044,defevspr2023file_wmbeplo,6,"BÕp nÊu c¬m")
+	--AddNpc(1274,1,11,100536,161938,defevspr2023file_wmbeplo,6,"BÕp nÊu c¬m")
+	--AddNpc(1274,1,162,50806,100550,defevspr2023file_wmbeplo,6,"BÕp nÊu c¬m")
+	--AddNpc(1274,1,176,50581,94540,defevspr2023file_wmbeplo,6,"BÕp nÊu c¬m")
+	--AddNpc(2007,1,78,50079,103674,defevspr2023file_wdmgr,6,"§¹i sø sù kiÖn")
+	--AddNpc(2007,1,1,50817,102400,defevspr2023file_wdmgr,6,"§¹i sø sù kiÖn")
+	--AddNpc(2007,1,37,55809,98284,defevspr2023file_wdmgr,6,"§¹i sø sù kiÖn")
+	--AddNpc(2007,1,80,56710,97102,defevspr2023file_wdmgr,6,"§¹i sø sù kiÖn")
+	--AddNpc(2007,1,11,100334,162014,defevspr2023file_wdmgr,6,"§¹i sø sù kiÖn")
+	--AddNpc(2007,1,162,50519,100738,defevspr2023file_wdmgr,6,"§¹i sø sù kiÖn")
+	--AddNpc(2007,1,176,50338,94448,defevspr2023file_wdmgr,6,"§¹i sø sù kiÖn")
+
+	--AddNpc(1540,1,78,50234,103502,defevspr2023file_sprtree,6,"C©y Tµi Léc")
+	--AddNpc(1540,1,1,50913,102202,defevspr2023file_sprtree,6,"C©y Tµi Léc")
+	--AddNpc(1540,1,37,55645,98220,defevspr2023file_sprtree,6,"C©y Tµi Léc")
+	--AddNpc(1540,1,80,56506,97044,defevspr2023file_sprtree,6,"C©y Tµi Léc")
+	--AddNpc(1540,1,11,100536,161938,defevspr2023file_sprtree,6,"C©y Tµi Léc")
+	--AddNpc(1540,1,162,50806,100550,defevspr2023file_sprtree,6,"C©y Tµi Léc")
+	--AddNpc(1540,1,176,50581,94540,defevspr2023file_sprtree,6,"C©y Tµi Léc")
+	--AddNpc(1122,1,78,50079,103674,defevspr2023file_mgr,6,"Tæng qu¶n sù kiÖn")
+	--AddNpc(1122,1,1,50817,102400,defevspr2023file_mgr,6,"Tæng qu¶n sù kiÖn")
+	--AddNpc(1122,1,37,55809,98284,defevspr2023file_mgr,6,"Tæng qu¶n sù kiÖn")
+	--AddNpc(1122,1,80,56710,97102,defevspr2023file_mgr,6,"Tæng qu¶n sù kiÖn")
+	--AddNpc(1122,1,11,100334,162014,defevspr2023file_mgr,6,"Tæng qu¶n sù kiÖn")
+	--AddNpc(1122,1,162,50519,100738,defevspr2023file_mgr,6,"Tæng qu¶n sù kiÖn")
+	--AddNpc(1122,1,176,50338,94448,defevspr2023file_mgr,6,"Tæng qu¶n sù kiÖn")
+	--AddNpc(1797,1,53,51818,101806,defevspr2023file_cake)
+	
+	--AddNpc(1495,1,78,50234,103502,defevspr2022file_noeltree,6," ")
+	--AddNpc(1495,1,1,50913,102202,defevspr2022file_noeltree,6," ")
+	--AddNpc(1495,1,37,55645,98220,defevspr2022file_noeltree,6," ")
+	--AddNpc(1495,1,80,56506,97044,defevspr2022file_noeltree,6," ")
+	--AddNpc(1495,1,11,100536,161938,defevspr2022file_noeltree,6," ")
+	--AddNpc(1495,1,162,50806,100550,defevspr2022file_noeltree,6," ")
+	--AddNpc(1495,1,176,50581,94540,defevspr2022file_noeltree,6," ")
+	--AddNpc(644,1,78,50079,103674,defevspr2022file_noelman,6,"¤ng giµ tuyÕt")
+	--AddNpc(644,1,1,50817,102400,defevspr2022file_noelman,6,"¤ng giµ tuyÕt")
+	--AddNpc(644,1,37,55809,98284,defevspr2022file_noelman,6,"¤ng giµ tuyÕt")
+	--AddNpc(644,1,80,56710,97102,defevspr2022file_noelman,6,"¤ng giµ tuyÕt")
+	--AddNpc(644,1,11,100334,162014,defevspr2022file_noelman,6,"¤ng giµ tuyÕt")
+	--AddNpc(644,1,162,50519,100738,defevspr2022file_noelman,6,"¤ng giµ tuyÕt")
+	--AddNpc(644,1,176,50338,94448,defevspr2022file_noelman,6,"¤ng giµ tuyÕt")
+	
+	--if( SubWorldID2Idx(1000) >= 0) then
+	--	addfootballnpc()
+	--end
+	--local idx = AddNpc(323,1,78,49624,104108,defevspr2022file_tqskfootball,6,"ThÕ tóc anh tµi");SetMask(idx,6011);
+	--idx = AddNpc(323,1,1,50697,101924,defevspr2022file_tqskfootball,6,"ThÕ tóc anh tµi");SetMask(idx,6011);
+	--idx = AddNpc(323,1,37,56089,97924,defevspr2022file_tqskfootball,6,"ThÕ tóc anh tµi");SetMask(idx,6011);
+	--idx = AddNpc(323,1,80,57011,97178,defevspr2022file_tqskfootball,6,"ThÕ tóc anh tµi");SetMask(idx,6011);
+	--idx = AddNpc(323,1,11,100023,161803,defevspr2022file_tqskfootball,6,"ThÕ tóc anh tµi");SetMask(idx,6011);
+	--idx = AddNpc(323,1,162,50468,100799,defevspr2022file_tqskfootball,6,"ThÕ tóc anh tµi");SetMask(idx,6011);
+	--idx = AddNpc(323,1,176,50184,94404,defevspr2022file_tqskfootball,6,"ThÕ tóc anh tµi");SetMask(idx,6011);
+	
+	--AddNpc(1573,1,78,49624,104108,defevspr2022file_tqskvnwoman,6,"ViÖt N÷ §¹i Sù Tæng qu¶n")
+	--AddNpc(1573,1,1,50697,101924,defevspr2022file_tqskvnwoman,6,"ViÖt N÷ §¹i Sù Tæng qu¶n")
+	--AddNpc(1573,1,37,56089,97924,defevspr2022file_tqskvnwoman,6,"ViÖt N÷ §¹i Sù Tæng qu¶n")
+	--AddNpc(1573,1,80,57011,97178,defevspr2022file_tqskvnwoman,6,"ViÖt N÷ §¹i Sù Tæng qu¶n")
+	--AddNpc(1573,1,11,100023,161803,defevspr2022file_tqskvnwoman,6,"ViÖt N÷ §¹i Sù Tæng qu¶n")
+	--AddNpc(1573,1,162,50468,100799,defevspr2022file_tqskvnwoman,6,"ViÖt N÷ §¹i Sù Tæng qu¶n")
+	--AddNpc(1573,1,176,50184,94404,defevspr2022file_tqskvnwoman,6,"ViÖt N÷ §¹i Sù Tæng qu¶n")
+
+	--AddNpc(1123,1,78,49624,104108,defevspr2022file_tqskmoon,6,"Tæng qu¶n sù kiÖn")
+	--AddNpc(1123,1,1,50697,101924,defevspr2022file_tqskmoon,6,"Tæng qu¶n sù kiÖn")
+	--AddNpc(1123,1,37,56089,97924,defevspr2022file_tqskmoon,6,"Tæng qu¶n sù kiÖn")
+	--AddNpc(1123,1,80,57011,97178,defevspr2022file_tqskmoon,6,"Tæng qu¶n sù kiÖn")
+	--AddNpc(1123,1,11,100023,161803,defevspr2022file_tqskmoon,6,"Tæng qu¶n sù kiÖn")
+	--AddNpc(1123,1,162,50468,100799,defevspr2022file_tqskmoon,6,"Tæng qu¶n sù kiÖn")
+	--AddNpc(1123,1,176,50184,94404,defevspr2022file_tqskmoon,6,"Tæng qu¶n sù kiÖn")
+
+	--AddNpc(216,1,78,49624,104108,defevspr2022file_tqsksm,6,"NghÖ nh©n trµ")
+	--AddNpc(216,1,1,50697,101924,defevspr2022file_tqsksm,6,"NghÖ nh©n trµ")
+	--AddNpc(216,1,37,56089,97924,defevspr2022file_tqsksm,6,"NghÖ nh©n trµ")
+	--AddNpc(216,1,80,57011,97178,defevspr2022file_tqsksm,6,"NghÖ nh©n trµ")
+	--AddNpc(216,1,11,100023,161803,defevspr2022file_tqsksm,6,"NghÖ nh©n trµ")
+	--AddNpc(216,1,162,50468,100799,defevspr2022file_tqsksm,6,"NghÖ nh©n trµ")
+	--AddNpc(216,1,176,50184,94404,defevspr2022file_tqsksm,6,"NghÖ nh©n trµ")
+	
+	--AddObj(8,100,53456,96887,"\\script\\event\\fishing\\sign_ctt1.lua")
+	--AddObj(8,100,56692,93327,"\\script\\event\\fishing\\sign_ctt2.lua",1)
+	--AddObj(8,153,45240,103834,"\\script\\event\\fishing\\sign_tct1.lua")
+	--AddObj(8,153,45288,105760,"\\script\\event\\fishing\\sign_tct1.lua")
+	--AddObj(8,153,54927,95259,"\\script\\event\\fishing\\sign_tct2.lua",1)
+	--AddNpc(2078,1,78,49901,103727,defevspr2022file_lolua)
+	--AddNpc(2078,1,162,50829,100659,defevspr2022file_lolua)
+	--AddNpc(216,1,78,49624,104108,defevspr2022file_tqsk,nil,"Tæng qu¶n sù kiÖn")
+	--AddNpc(216,1,162,50468,100799,defevspr2022file_tqsk,nil,"Tæng qu¶n sù kiÖn")
+	--AddNpc(216,1,78,49104,103704,defevspr2022file_thouruou,6,"Thî ñ r­îu")
+	--AddNpc(1658,1,78,49803,103441,defevspr2022file_bantiec)
+	--AddNpc(1658,1,78,50414,103060,defevspr2022file_bantiec)
+	--AddNpc(1658,1,78,50327,103942,defevspr2022file_bantiec)
+	
+	--AddNpc(2129,1,78,49104,103704,defevspr2022file_thaydo)
+	--AddNpc(2129,1,1,51883,100667,defevspr2022file_thaydo)
+	--AddNpc(2129,1,37,58053,98879,defevspr2022file_thaydo)
+	--AddNpc(2129,1,80,55559,95659,defevspr2022file_thaydo)
+	--AddNpc(2129,1,11,100295,159663,defevspr2022file_thaydo)
+	--AddNpc(2129,1,162,51020,102799,defevspr2022file_thaydo)
+	--AddNpc(2129,1,176,47951,95133,defevspr2022file_thaydo)
+	
+	--AddNpc(1528,1,78,50766,103364,defevspr2022file_thantai,6,"ThÇn Tµi")
+	--AddNpc(1528,1,1,50697,101924,defevspr2022file_thantai,6,"ThÇn Tµi")
+	--AddNpc(1528,1,37,56089,97924,defevspr2022file_thantai,6,"ThÇn Tµi")
+	--AddNpc(1528,1,80,57011,97178,defevspr2022file_thantai,6,"ThÇn Tµi")
+	--AddNpc(1528,1,11,100023,161803,defevspr2022file_thantai,6,"ThÇn Tµi")
+	--AddNpc(1528,1,162,50432,100672,defevspr2022file_thantai,6,"ThÇn Tµi")
+	--AddNpc(1528,1,176,50184,94404,defevspr2022file_thantai,6,"ThÇn Tµi")
+	--
+	--AddNpc(1334,1,78,50234,103502,defevspr2022file_caymai,6," ")
+	--AddNpc(1333,1,1,51362,102796,defevspr2022file_caymai,6," ")
+	--AddNpc(1334,1,37,55645,98220,defevspr2022file_caymai,6," ")
+	--AddNpc(1334,1,80,56506,97044,defevspr2022file_caymai,6," ")
+	--AddNpc(1333,1,11,100536,161938,defevspr2022file_caymai,6," ")
+	--AddNpc(1333,1,162,50806,100550,defevspr2022file_caymai,6," ")
+	--AddNpc(1333,1,176,50581,94540,defevspr2022file_caymai,6," ")
+	
+	--for i=520,526 do	--Minh NguyÖt trÊn
+	--AddNpc(1274,1,i,49991,104665,defevspr2022file_bep,6,"BÕp nÊu b¸nh")
+	--AddNpc(1274,1,i,52364,104746,defevspr2022file_bep,6,"BÕp nÊu b¸nh")
+	--AddNpc(1274,1,i,52271,101054,defevspr2022file_bep,6,"BÕp nÊu b¸nh")
+	--AddNpc(1274,1,i,49911,100997,defevspr2022file_bep,6,"BÕp nÊu b¸nh")
+	--end
+	--AddNpc(1044,1,78,49104,103704,defevspr2022file_thoghephoa,6,"Thî ghÐp hoa")
+	--AddNpc(1044,1,1,51883,100667,defevspr2022file_thoghephoa,6,"Thî ghÐp hoa")
+	--AddNpc(1044,1,37,58053,98879,defevspr2022file_thoghephoa,6,"Thî ghÐp hoa")
+	--AddNpc(1044,1,80,55559,95659,defevspr2022file_thoghephoa,6,"Thî ghÐp hoa")
+	--AddNpc(1044,1,11,100295,159663,defevspr2022file_thoghephoa,6,"Thî ghÐp hoa")
+	--AddNpc(1044,1,162,51020,102799,defevspr2022file_thoghephoa,6,"Thî ghÐp hoa")
+	--AddNpc(1044,1,176,47951,95133,defevspr2022file_thoghephoa,6,"Thî ghÐp hoa")
+end;
+
+--function addfootballnpc()
+--	local nIdx = AddNpc(53,1,1000,52538,100842,"\\script\\event\\football\\birdmanager.lua",6,"Tóc CÇu Tæng Qu¶n");
+--	nIdx = AddNpc(557,1,1000,52294,99744,"\\script\\event\\football\\bird.lua",nil," ");
+--	AddNpc(625,1,1000,52654,101266,"\\script\\event\\football\\itembox.lua",6);
+--	SetAIMode(nIdx,100,1)
+--	SetMask(nIdx,4910)
+--	NpcHideInfo(nIdx,1)
+--	SetNpcSpeed(nIdx,30,1)
+--	local tbNpcStone={
+--		{52696,100287},
+--		{52610,100292},
+--		{52782,100285},
+--		{52870,100282},
+--		{52516,100292}
+--	};
+--	for i=1,getn(tbNpcStone) do
+--		AddNpc(1574,1,1000,tbNpcStone[i][1],tbNpcStone[i][2],nil,nil," ")
+--	end
+--
+--	local defScriptEventFBBanTrap = FileName2Id("\\script\\event\\football\\bantrap.lua");
+--	for i=1,getn(tbFBBanTrap) do
+--		AddTrap(1000,tbFBBanTrap[i][1],tbFBBanTrap[i][2],defScriptEventFBBanTrap)
+--	end
+--	
+--	for i=1,getn(tbFBMATCHTRAP) do
+--		AddTrap(1000,tbFBMATCHTRAP[i][1],tbFBMATCHTRAP[i][2],tbFBMATCHTRAP[i][3])
+--	end
+--	for i=1,getn(tbFBMATCHFLAG) do
+--		AddNpc(2057,1,1000,tbFBMATCHFLAG[i][1],tbFBMATCHFLAG[i][2],nil,6," ")
+--	end
+--end;
+--
+--tbFBMATCHFLAG={
+--{50255,97201},
+--{49229,98225},
+--{50894,99921},
+--{51921,98866},
+--{49753,97711},
+--{51439,99374},
+--{50798,97743},
+--{51344,98286},
+--{50350,99375},
+--{49774,98799},
+--};
+--
+--defScriptFBMatch1 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap1.lua")--50255,97234
+--defScriptFBMatch2 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap2.lua")--50285,97266
+--defScriptFBMatch3 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap3.lua")--50223,97268
+--defScriptFBMatch4 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap4.lua")--50312,97301
+--defScriptFBMatch5 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap5.lua")--50341,97333
+--defScriptFBMatch6 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap6.lua")--50373,97365
+--defScriptFBMatch7 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap7.lua")--50405,97396
+--defScriptFBMatch8 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap8.lua")--50437,97429
+--defScriptFBMatch9 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap9.lua")--50468,97461
+--defScriptFBMatch10 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap10.lua")--50498,97493
+--defScriptFBMatch11 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap11.lua")--50531,97526
+--defScriptFBMatch12 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap12.lua")--50564,97556
+--defScriptFBMatch13 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap13.lua")--50596,97589
+--defScriptFBMatch14 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap14.lua")--50629,97623
+--defScriptFBMatch15 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap15.lua")--50660,97654
+--defScriptFBMatch16 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap16.lua")--50693,97684
+--defScriptFBMatch17 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap17.lua")--50725,97717
+--defScriptFBMatch18 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap18.lua")--50757,97749
+--defScriptFBMatch19 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap19.lua")--50789,97782
+--defScriptFBMatch20 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap20.lua")--50820,97813
+--defScriptFBMatch21 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap21.lua")--50852,97846
+--defScriptFBMatch22 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap22.lua")--50884,97876
+--defScriptFBMatch23 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap23.lua")--50916,97909
+--defScriptFBMatch24 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap24.lua")--50947,97941
+--defScriptFBMatch25 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap25.lua")--50979,97973
+--defScriptFBMatch26 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap26.lua")--50992,97999
+--defScriptFBMatch27 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap27.lua")--50978,98023
+--defScriptFBMatch28 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap28.lua")--50946,98055
+--defScriptFBMatch29 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap29.lua")--50915,98087
+--defScriptFBMatch30 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap30.lua")--50882,98120
+--defScriptFBMatch31 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap31.lua")--50852,98153
+--defScriptFBMatch32 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap32.lua")--50820,98184
+--defScriptFBMatch33 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap33.lua")--50786,98216
+--defScriptFBMatch34 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap34.lua")--50755,98248
+--defScriptFBMatch35 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap35.lua")--50723,98279
+--defScriptFBMatch36 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap36.lua")--50691,98313
+--defScriptFBMatch37 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap37.lua")--50658,98345
+--defScriptFBMatch38 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap38.lua")--50627,98380
+--defScriptFBMatch39 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap39.lua")--50594,98409
+--defScriptFBMatch40 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap40.lua")--50563,98440
+--defScriptFBMatch41 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap41.lua")--50531,98473
+--defScriptFBMatch42 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap42.lua")--50499,98506
+--defScriptFBMatch43 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap43.lua")--50467,98536
+--defScriptFBMatch44 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap44.lua")--50434,98567
+--defScriptFBMatch45 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap45.lua")--50403,98597
+--defScriptFBMatch46 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap46.lua")--50370,98631
+--defScriptFBMatch47 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap47.lua")--50338,98662
+--defScriptFBMatch48 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap48.lua")--50306,98695
+--defScriptFBMatch49 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap49.lua")--50274,98728
+--defScriptFBMatch50 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap50.lua")--50243,98760
+--defScriptFBMatch51 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap51.lua")--50210,98791
+--defScriptFBMatch52 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap52.lua")--50179,98824
+--defScriptFBMatch53 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap53.lua")--50147,98857
+--defScriptFBMatch54 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap54.lua")--50114,98888
+--defScriptFBMatch55 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap55.lua")--50083,98921
+--defScriptFBMatch56 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap56.lua")--50051,98950
+--defScriptFBMatch57 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap57.lua")--50029,98983
+--defScriptFBMatch58 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap58.lua")--50000,98983
+--defScriptFBMatch59 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap59.lua")--49976,98949
+--defScriptFBMatch60 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap60.lua")--49944,98920
+--defScriptFBMatch61 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap61.lua")--49913,98888
+--defScriptFBMatch62 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap62.lua")--49882,98857
+--defScriptFBMatch63 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap63.lua")--49848,98825
+--defScriptFBMatch64 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap64.lua")--49817,98790
+--defScriptFBMatch65 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap65.lua")--49785,98760
+--defScriptFBMatch66 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap66.lua")--49753,98726
+--defScriptFBMatch67 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap67.lua")--49722,98696
+--defScriptFBMatch68 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap68.lua")--49687,98664
+--defScriptFBMatch69 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap69.lua")--49657,98631
+--defScriptFBMatch70 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap70.lua")--49625,98600
+--defScriptFBMatch71 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap71.lua")--49594,98567
+--defScriptFBMatch72 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap72.lua")--49561,98535
+--defScriptFBMatch73 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap73.lua")--49529,98503
+--defScriptFBMatch74 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap74.lua")--49497,98470
+--defScriptFBMatch75 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap75.lua")--49465,98439
+--defScriptFBMatch76 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap76.lua")--49434,98408
+--defScriptFBMatch77 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap77.lua")--49402,98375
+--defScriptFBMatch78 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap78.lua")--49370,98343
+--defScriptFBMatch79 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap79.lua")--49338,98312
+--defScriptFBMatch80 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap80.lua")--49306,98278
+--defScriptFBMatch81 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap81.lua")--49274,98247
+--defScriptFBMatch82 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap82.lua")--49266,98223
+--defScriptFBMatch83 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap83.lua")--49306,98200
+--defScriptFBMatch84 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap84.lua")--49338,98167
+--defScriptFBMatch85 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap85.lua")--49370,98135
+--defScriptFBMatch86 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap86.lua")--49402,98103
+--defScriptFBMatch87 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap87.lua")--49434,98071
+--defScriptFBMatch88 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap88.lua")--49465,98038
+--defScriptFBMatch89 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap89.lua")--49497,98005
+--defScriptFBMatch90 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap90.lua")--49529,97974
+--defScriptFBMatch91 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap91.lua")--49561,97940
+--defScriptFBMatch92 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap92.lua")--49593,97908
+--defScriptFBMatch93 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap93.lua")--49625,97878
+--defScriptFBMatch94 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap94.lua")--49657,97845
+--defScriptFBMatch95 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap95.lua")--49689,97813
+--defScriptFBMatch96 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap96.lua")--49721,97782
+--defScriptFBMatch97 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap97.lua")--49753,97750
+--defScriptFBMatch98 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap98.lua")--49784,97716
+--defScriptFBMatch99 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap99.lua")--49817,97685
+--defScriptFBMatch100 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap100.lua")--49849,97652
+--defScriptFBMatch101 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap101.lua")--49881,97620
+--defScriptFBMatch102 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap102.lua")--49913,97589
+--defScriptFBMatch103 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap103.lua")--49944,97556
+--defScriptFBMatch104 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap104.lua")--49977,97524
+--defScriptFBMatch105 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap105.lua")--50008,97492
+--defScriptFBMatch106 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap106.lua")--50040,97461
+--defScriptFBMatch107 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap107.lua")--50073,97430
+--defScriptFBMatch108 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap108.lua")--50104,97399
+--defScriptFBMatch109 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap109.lua")--50136,97365
+--defScriptFBMatch110 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap110.lua")--50167,97333
+--defScriptFBMatch111 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap111.lua")--50199,97301
+--defScriptFBMatch112 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap112.lua")
+--defScriptFBMatch113 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap113.lua")
+--defScriptFBMatch114 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap114.lua")
+--defScriptFBMatch115 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap115.lua")
+--defScriptFBMatch116 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap116.lua")
+--defScriptFBMatch117 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap117.lua")
+--defScriptFBMatch118 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap118.lua")
+--defScriptFBMatch119 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap119.lua")
+--defScriptFBMatch120 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap120.lua")
+--defScriptFBMatch121 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap121.lua")
+--defScriptFBMatch122 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap122.lua")
+--defScriptFBMatch123 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap123.lua")
+--defScriptFBMatch124 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap124.lua")
+--defScriptFBMatch125 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap125.lua")
+--defScriptFBMatch126 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap126.lua")
+--defScriptFBMatch127 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap127.lua")
+--defScriptFBMatch128 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap128.lua")
+--defScriptFBMatch129 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap129.lua")
+--defScriptFBMatch130 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap130.lua")
+--defScriptFBMatch131 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap131.lua")
+--defScriptFBMatch132 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap132.lua")
+--defScriptFBMatch133 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap133.lua")
+--defScriptFBMatch134 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap134.lua")
+--defScriptFBMatch135 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap135.lua")
+--defScriptFBMatch136 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap136.lua")
+--defScriptFBMatch137 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap137.lua")
+--defScriptFBMatch138 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap138.lua")
+--defScriptFBMatch139 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap139.lua")
+--defScriptFBMatch140 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap140.lua")
+--defScriptFBMatch141 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap141.lua")
+--defScriptFBMatch142 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap142.lua")
+--defScriptFBMatch143 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap143.lua")
+--defScriptFBMatch144 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap144.lua")
+--defScriptFBMatch145 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap145.lua")
+--defScriptFBMatch146 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap146.lua")
+--defScriptFBMatch147 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap147.lua")
+--defScriptFBMatch148 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap148.lua")
+--defScriptFBMatch149 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap149.lua")
+--defScriptFBMatch150 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap150.lua")
+--defScriptFBMatch151 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap151.lua")
+--defScriptFBMatch152 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap152.lua")
+--defScriptFBMatch153 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap153.lua")
+--defScriptFBMatch154 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap154.lua")
+--defScriptFBMatch155 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap155.lua")
+--defScriptFBMatch156 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap156.lua")
+--defScriptFBMatch157 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap157.lua")
+--defScriptFBMatch158 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap158.lua")
+--defScriptFBMatch159 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap159.lua")
+--defScriptFBMatch160 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap160.lua")
+--defScriptFBMatch161 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap161.lua")
+--defScriptFBMatch162 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap162.lua")
+--defScriptFBMatch163 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap163.lua")
+--defScriptFBMatch164 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap164.lua")
+--defScriptFBMatch165 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap165.lua")
+--defScriptFBMatch166 = FileName2Id("\\script\\event\\football\\matchtrap\\fbtrap166.lua")
+--
+--tbFBMATCHTRAP={
+--{50253,97137,defScriptFBMatch1},
+--{50254,97170,defScriptFBMatch1},
+--{50255,97200,defScriptFBMatch1},
+--{50286,97168,defScriptFBMatch2},
+--{50285,97202,defScriptFBMatch2},
+--{50286,97232,defScriptFBMatch2},
+--{50222,97168,defScriptFBMatch3},
+--{50223,97200,defScriptFBMatch3},
+--{50223,97232,defScriptFBMatch3},
+--{50318,97201,defScriptFBMatch4},
+--{50318,97233,defScriptFBMatch4},
+--{50317,97263,defScriptFBMatch4},
+--{50350,97232,defScriptFBMatch5},
+--{50350,97265,defScriptFBMatch5},
+--{50350,97297,defScriptFBMatch5},
+--{50383,97265,defScriptFBMatch6},
+--{50382,97295,defScriptFBMatch6},
+--{50382,97327,defScriptFBMatch6},
+--{50414,97296,defScriptFBMatch7},
+--{50415,97328,defScriptFBMatch7},
+--{50414,97359,defScriptFBMatch7},
+--{50446,97327,defScriptFBMatch8},
+--{50446,97361,defScriptFBMatch8},
+--{50447,97392,defScriptFBMatch8},
+--{50479,97361,defScriptFBMatch9},
+--{50479,97392,defScriptFBMatch9},
+--{50479,97424,defScriptFBMatch9},
+--{50510,97391,defScriptFBMatch10},
+--{50511,97424,defScriptFBMatch10},
+--{50511,97455,defScriptFBMatch10},
+--{50542,97425,defScriptFBMatch11},
+--{50542,97455,defScriptFBMatch11},
+--{50543,97488,defScriptFBMatch11},
+--{50575,97455,defScriptFBMatch12},
+--{50575,97489,defScriptFBMatch12},
+--{50575,97519,defScriptFBMatch12},
+--{50607,97487,defScriptFBMatch13},
+--{50607,97520,defScriptFBMatch13},
+--{50605,97552,defScriptFBMatch13},
+--{50639,97520,defScriptFBMatch14},
+--{50639,97550,defScriptFBMatch14},
+--{50639,97583,defScriptFBMatch14},
+--{50670,97552,defScriptFBMatch15},
+--{50671,97584,defScriptFBMatch15},
+--{50670,97615,defScriptFBMatch15},
+--{50703,97584,defScriptFBMatch16},
+--{50702,97616,defScriptFBMatch16},
+--{50702,97649,defScriptFBMatch16},
+--{50734,97615,defScriptFBMatch17},
+--{50734,97649,defScriptFBMatch17},
+--{50735,97680,defScriptFBMatch17},
+--{50766,97649,defScriptFBMatch18},
+--{50767,97679,defScriptFBMatch18},
+--{50766,97711,defScriptFBMatch18},
+--{50800,97681,defScriptFBMatch19},
+--{50799,97712,defScriptFBMatch19},
+--{50798,97744,defScriptFBMatch19},
+--{50831,97710,defScriptFBMatch20},
+--{50832,97744,defScriptFBMatch20},
+--{50832,97776,defScriptFBMatch20},
+--{50863,97744,defScriptFBMatch21},
+--{50863,97776,defScriptFBMatch21},
+--{50863,97808,defScriptFBMatch21},
+--{50895,97777,defScriptFBMatch22},
+--{50895,97809,defScriptFBMatch22},
+--{50894,97839,defScriptFBMatch22},
+--{50927,97808,defScriptFBMatch23},
+--{50926,97840,defScriptFBMatch23},
+--{50926,97871,defScriptFBMatch23},
+--{50959,97840,defScriptFBMatch24},
+--{50959,97871,defScriptFBMatch24},
+--{50959,97901,defScriptFBMatch24},
+--{50991,97872,defScriptFBMatch25},
+--{50990,97904,defScriptFBMatch25},
+--{50991,97936,defScriptFBMatch25},
+--{51024,97904,defScriptFBMatch26},
+--{51023,97936,defScriptFBMatch26},
+--{51023,97966,defScriptFBMatch26},
+--{51055,97936,defScriptFBMatch27},
+--{51055,97968,defScriptFBMatch27},
+--{51054,98000,defScriptFBMatch27},
+--{51086,97968,defScriptFBMatch28},
+--{51086,97999,defScriptFBMatch28},
+--{51086,98032,defScriptFBMatch28},
+--{51118,98000,defScriptFBMatch29},
+--{51119,98033,defScriptFBMatch29},
+--{51119,98064,defScriptFBMatch29},
+--{51151,98033,defScriptFBMatch30},
+--{51149,98064,defScriptFBMatch30},
+--{51150,98095,defScriptFBMatch30},
+--{51183,98064,defScriptFBMatch31},
+--{51182,98096,defScriptFBMatch31},
+--{51182,98127,defScriptFBMatch31},
+--{51214,98097,defScriptFBMatch32},
+--{51214,98128,defScriptFBMatch32},
+--{51215,98158,defScriptFBMatch32},
+--{51245,98128,defScriptFBMatch33},
+--{51247,98159,defScriptFBMatch33},
+--{51246,98191,defScriptFBMatch33},
+--{51278,98160,defScriptFBMatch34},
+--{51278,98192,defScriptFBMatch34},
+--{51278,98224,defScriptFBMatch34},
+--{51310,98191,defScriptFBMatch35},
+--{51310,98224,defScriptFBMatch35},
+--{51310,98254,defScriptFBMatch35},
+--{51343,98223,defScriptFBMatch36},
+--{51343,98256,defScriptFBMatch36},
+--{51342,98288,defScriptFBMatch36},
+--{51373,98258,defScriptFBMatch37},
+--{51374,98287,defScriptFBMatch37},
+--{51374,98319,defScriptFBMatch37},
+--{51406,98288,defScriptFBMatch38},
+--{51406,98319,defScriptFBMatch38},
+--{51406,98351,defScriptFBMatch38},
+--{51437,98321,defScriptFBMatch39},
+--{51437,98352,defScriptFBMatch39},
+--{51439,98383,defScriptFBMatch39},
+--{51469,98351,defScriptFBMatch40},
+--{51470,98385,defScriptFBMatch40},
+--{51471,98417,defScriptFBMatch40},
+--{51502,98384,defScriptFBMatch41},
+--{51502,98417,defScriptFBMatch41},
+--{51503,98448,defScriptFBMatch41},
+--{51532,98416,defScriptFBMatch42},
+--{51534,98448,defScriptFBMatch42},
+--{51535,98479,defScriptFBMatch42},
+--{51565,98449,defScriptFBMatch43},
+--{51565,98480,defScriptFBMatch43},
+--{51566,98510,defScriptFBMatch43},
+--{51598,98480,defScriptFBMatch44},
+--{51597,98513,defScriptFBMatch44},
+--{51599,98544,defScriptFBMatch44},
+--{51629,98514,defScriptFBMatch45},
+--{51631,98544,defScriptFBMatch45},
+--{51630,98576,defScriptFBMatch45},
+--{51662,98546,defScriptFBMatch46},
+--{51662,98576,defScriptFBMatch46},
+--{51661,98611,defScriptFBMatch46},
+--{51694,98577,defScriptFBMatch47},
+--{51694,98609,defScriptFBMatch47},
+--{51695,98638,defScriptFBMatch47},
+--{51726,98609,defScriptFBMatch48},
+--{51725,98641,defScriptFBMatch48},
+--{51725,98671,defScriptFBMatch48},
+--{51757,98640,defScriptFBMatch49},
+--{51759,98672,defScriptFBMatch49},
+--{51758,98705,defScriptFBMatch49},
+--{51790,98672,defScriptFBMatch50},
+--{51790,98704,defScriptFBMatch50},
+--{51790,98733,defScriptFBMatch50},
+--{51822,98704,defScriptFBMatch51},
+--{51822,98735,defScriptFBMatch51},
+--{51822,98767,defScriptFBMatch51},
+--{51854,98735,defScriptFBMatch52},
+--{51854,98767,defScriptFBMatch52},
+--{51854,98800,defScriptFBMatch52},
+--{51886,98769,defScriptFBMatch53},
+--{51886,98800,defScriptFBMatch53},
+--{51886,98831,defScriptFBMatch53},
+--{51919,98801,defScriptFBMatch54},
+--{51918,98832,defScriptFBMatch54},
+--{51918,98865,defScriptFBMatch54},
+--{51949,98832,defScriptFBMatch54},
+--{51949,98865,defScriptFBMatch54},
+--{51949,98896,defScriptFBMatch54},
+--{51949,98929,defScriptFBMatch54},
+--{51918,98898,defScriptFBMatch54},
+--{51917,98928,defScriptFBMatch54},
+--{51918,98962,defScriptFBMatch54},
+--{51887,98930,defScriptFBMatch54},
+--{51887,98961,defScriptFBMatch54},
+--{51887,98991,defScriptFBMatch54},
+--{51855,98959,defScriptFBMatch55},
+--{51854,98991,defScriptFBMatch55},
+--{51855,99023,defScriptFBMatch55},
+--{51822,98993,defScriptFBMatch56},
+--{51822,99024,defScriptFBMatch56},
+--{51824,99055,defScriptFBMatch56},
+--{51791,99024,defScriptFBMatch57},
+--{51792,99056,defScriptFBMatch57},
+--{51791,99086,defScriptFBMatch57},
+--{51758,99055,defScriptFBMatch112},
+--{51759,99087,defScriptFBMatch112},
+--{51760,99122,defScriptFBMatch112},
+--{51727,99087,defScriptFBMatch113},
+--{51727,99121,defScriptFBMatch113},
+--{51727,99152,defScriptFBMatch113},
+--{51695,99119,defScriptFBMatch114},
+--{51694,99153,defScriptFBMatch114},
+--{51694,99185,defScriptFBMatch114},
+--{51663,99151,defScriptFBMatch115},
+--{51662,99185,defScriptFBMatch115},
+--{51664,99216,defScriptFBMatch115},
+--{51630,99185,defScriptFBMatch116},
+--{51630,99215,defScriptFBMatch116},
+--{51630,99246,defScriptFBMatch116},
+--{51598,99213,defScriptFBMatch117},
+--{51598,99248,defScriptFBMatch117},
+--{51599,99279,defScriptFBMatch117},
+--{51566,99248,defScriptFBMatch118},
+--{51567,99280,defScriptFBMatch118},
+--{51567,99312,defScriptFBMatch118},
+--{51534,99280,defScriptFBMatch119},
+--{51535,99312,defScriptFBMatch119},
+--{51536,99343,defScriptFBMatch119},
+--{51502,99313,defScriptFBMatch120},
+--{51503,99343,defScriptFBMatch120},
+--{51503,99376,defScriptFBMatch120},
+--{51470,99343,defScriptFBMatch121},
+--{51471,99375,defScriptFBMatch121},
+--{51470,99408,defScriptFBMatch121},
+--{51437,99376,defScriptFBMatch122},
+--{51439,99408,defScriptFBMatch122},
+--{51439,99439,defScriptFBMatch122},
+--{51407,99408,defScriptFBMatch123},
+--{51406,99438,defScriptFBMatch123},
+--{51407,99471,defScriptFBMatch123},
+--{51374,99439,defScriptFBMatch124},
+--{51374,99471,defScriptFBMatch124},
+--{51375,99504,defScriptFBMatch124},
+--{51342,99471,defScriptFBMatch125},
+--{51343,99504,defScriptFBMatch125},
+--{51343,99536,defScriptFBMatch125},
+--{51310,99504,defScriptFBMatch126},
+--{51311,99536,defScriptFBMatch126},
+--{51311,99566,defScriptFBMatch126},
+--{51279,99536,defScriptFBMatch127},
+--{51279,99566,defScriptFBMatch127},
+--{51279,99599,defScriptFBMatch127},
+--{51246,99567,defScriptFBMatch128},
+--{51246,99600,defScriptFBMatch128},
+--{51247,99632,defScriptFBMatch128},
+--{51214,99601,defScriptFBMatch129},
+--{51213,99632,defScriptFBMatch129},
+--{51215,99664,defScriptFBMatch129},
+--{51181,99632,defScriptFBMatch130},
+--{51183,99664,defScriptFBMatch130},
+--{51183,99696,defScriptFBMatch130},
+--{51150,99664,defScriptFBMatch131},
+--{51150,99695,defScriptFBMatch131},
+--{51150,99728,defScriptFBMatch131},
+--{51117,99694,defScriptFBMatch132},
+--{51118,99729,defScriptFBMatch132},
+--{51118,99759,defScriptFBMatch132},
+--{51085,99726,defScriptFBMatch133},
+--{51086,99760,defScriptFBMatch133},
+--{51085,99794,defScriptFBMatch133},
+--{51053,99759,defScriptFBMatch134},
+--{51054,99793,defScriptFBMatch134},
+--{51055,99822,defScriptFBMatch134},
+--{51021,99791,defScriptFBMatch135},
+--{51021,99824,defScriptFBMatch135},
+--{51022,99857,defScriptFBMatch135},
+--{50990,99823,defScriptFBMatch136},
+--{50990,99856,defScriptFBMatch136},
+--{50990,99887,defScriptFBMatch136},
+--{50958,99855,defScriptFBMatch137},
+--{50957,99886,defScriptFBMatch137},
+--{50957,99918,defScriptFBMatch137},
+--{50927,99887,defScriptFBMatch138},
+--{50926,99919,defScriptFBMatch138},
+--{50926,99954,defScriptFBMatch138},
+--{50895,99887,defScriptFBMatch139},
+--{50893,99921,defScriptFBMatch139},
+--{50894,99954,defScriptFBMatch139},
+--{50863,99889,defScriptFBMatch140},
+--{50863,99921,defScriptFBMatch140},
+--{50862,99952,defScriptFBMatch140},
+--{50831,99855,defScriptFBMatch141},
+--{50832,99890,defScriptFBMatch141},
+--{50831,99921,defScriptFBMatch141},
+--{50799,99822,defScriptFBMatch142},
+--{50799,99857,defScriptFBMatch142},
+--{50799,99888,defScriptFBMatch142},
+--{50767,99789,defScriptFBMatch143},
+--{50766,99825,defScriptFBMatch143},
+--{50766,99856,defScriptFBMatch143},
+--{50735,99760,defScriptFBMatch144},
+--{50735,99793,defScriptFBMatch144},
+--{50735,99825,defScriptFBMatch144},
+--{50702,99727,defScriptFBMatch145},
+--{50702,99760,defScriptFBMatch145},
+--{50702,99791,defScriptFBMatch145},
+--{50671,99695,defScriptFBMatch146},
+--{50671,99728,defScriptFBMatch146},
+--{50671,99761,defScriptFBMatch146},
+--{50638,99663,defScriptFBMatch147},
+--{50639,99696,defScriptFBMatch147},
+--{50639,99730,defScriptFBMatch147},
+--{50607,99632,defScriptFBMatch148},
+--{50607,99664,defScriptFBMatch148},
+--{50606,99696,defScriptFBMatch148},
+--{50576,99599,defScriptFBMatch149},
+--{50575,99632,defScriptFBMatch149},
+--{50575,99664,defScriptFBMatch149},
+--{50543,99566,defScriptFBMatch150},
+--{50544,99600,defScriptFBMatch150},
+--{50543,99631,defScriptFBMatch150},
+--{50512,99535,defScriptFBMatch151},
+--{50511,99568,defScriptFBMatch151},
+--{50511,99600,defScriptFBMatch151},
+--{50479,99503,defScriptFBMatch152},
+--{50479,99537,defScriptFBMatch152},
+--{50479,99567,defScriptFBMatch152},
+--{50447,99471,defScriptFBMatch153},
+--{50447,99505,defScriptFBMatch153},
+--{50447,99537,defScriptFBMatch153},
+--{50415,99438,defScriptFBMatch154},
+--{50416,99472,defScriptFBMatch154},
+--{50416,99504,defScriptFBMatch154},
+--{50383,99407,defScriptFBMatch155},
+--{50384,99441,defScriptFBMatch155},
+--{50383,99473,defScriptFBMatch155},
+--{50351,99374,defScriptFBMatch156},
+--{50351,99408,defScriptFBMatch156},
+--{50351,99439,defScriptFBMatch156},
+--{50318,99343,defScriptFBMatch157},
+--{50319,99375,defScriptFBMatch157},
+--{50320,99408,defScriptFBMatch157},
+--{50287,99310,defScriptFBMatch158},
+--{50288,99344,defScriptFBMatch158},
+--{50287,99376,defScriptFBMatch158},
+--{50255,99279,defScriptFBMatch159},
+--{50255,99312,defScriptFBMatch159},
+--{50255,99345,defScriptFBMatch159},
+--{50223,99247,defScriptFBMatch160},
+--{50223,99281,defScriptFBMatch160},
+--{50223,99312,defScriptFBMatch160},
+--{50192,99215,defScriptFBMatch161},
+--{50191,99248,defScriptFBMatch161},
+--{50191,99281,defScriptFBMatch161},
+--{50158,99184,defScriptFBMatch162},
+--{50158,99215,defScriptFBMatch162},
+--{50159,99249,defScriptFBMatch162},
+--{50127,99151,defScriptFBMatch163},
+--{50127,99186,defScriptFBMatch163},
+--{50127,99216,defScriptFBMatch163},
+--{50095,99119,defScriptFBMatch164},
+--{50094,99151,defScriptFBMatch164},
+--{50094,99183,defScriptFBMatch164},
+--{50063,99088,defScriptFBMatch165},
+--{50063,99121,defScriptFBMatch165},
+--{50063,99154,defScriptFBMatch165},
+--{50031,99055,defScriptFBMatch166},
+--{50031,99089,defScriptFBMatch166},
+--{50031,99120,defScriptFBMatch166},
+--{49999,99024,defScriptFBMatch58},
+--{49999,99055,defScriptFBMatch58},
+--{50000,99087,defScriptFBMatch58},
+--{49967,98992,defScriptFBMatch59},
+--{49967,99025,defScriptFBMatch59},
+--{49967,99058,defScriptFBMatch59},
+--{49935,98961,defScriptFBMatch60},
+--{49934,98992,defScriptFBMatch60},
+--{49934,99026,defScriptFBMatch60},
+--{49902,98928,defScriptFBMatch61},
+--{49903,98961,defScriptFBMatch61},
+--{49904,98994,defScriptFBMatch61},
+--{49870,98897,defScriptFBMatch62},
+--{49870,98929,defScriptFBMatch62},
+--{49870,98961,defScriptFBMatch62},
+--{49839,98863,defScriptFBMatch63},
+--{49839,98898,defScriptFBMatch63},
+--{49839,98927,defScriptFBMatch63},
+--{49806,98832,defScriptFBMatch64},
+--{49806,98864,defScriptFBMatch64},
+--{49806,98897,defScriptFBMatch64},
+--{49775,98798,defScriptFBMatch65},
+--{49775,98833,defScriptFBMatch65},
+--{49774,98865,defScriptFBMatch65},
+--{49742,98768,defScriptFBMatch66},
+--{49742,98799,defScriptFBMatch66},
+--{49742,98833,defScriptFBMatch66},
+--{49710,98736,defScriptFBMatch67},
+--{49709,98768,defScriptFBMatch67},
+--{49710,98800,defScriptFBMatch67},
+--{49677,98703,defScriptFBMatch68},
+--{49677,98735,defScriptFBMatch68},
+--{49678,98768,defScriptFBMatch68},
+--{49646,98673,defScriptFBMatch69},
+--{49647,98705,defScriptFBMatch69},
+--{49647,98738,defScriptFBMatch69},
+--{49615,98639,defScriptFBMatch70},
+--{49614,98674,defScriptFBMatch70},
+--{49614,98704,defScriptFBMatch70},
+--{49581,98608,defScriptFBMatch71},
+--{49581,98641,defScriptFBMatch71},
+--{49582,98674,defScriptFBMatch71},
+--{49551,98575,defScriptFBMatch72},
+--{49551,98608,defScriptFBMatch72},
+--{49551,98640,defScriptFBMatch72},
+--{49518,98543,defScriptFBMatch73},
+--{49519,98577,defScriptFBMatch73},
+--{49519,98608,defScriptFBMatch73},
+--{49487,98511,defScriptFBMatch74},
+--{49487,98545,defScriptFBMatch74},
+--{49487,98577,defScriptFBMatch74},
+--{49454,98481,defScriptFBMatch75},
+--{49455,98513,defScriptFBMatch75},
+--{49455,98544,defScriptFBMatch75},
+--{49422,98447,defScriptFBMatch76},
+--{49422,98482,defScriptFBMatch76},
+--{49422,98514,defScriptFBMatch76},
+--{49391,98414,defScriptFBMatch77},
+--{49390,98450,defScriptFBMatch77},
+--{49390,98481,defScriptFBMatch77},
+--{49358,98384,defScriptFBMatch78},
+--{49357,98416,defScriptFBMatch78},
+--{49358,98445,defScriptFBMatch78},
+--{49327,98353,defScriptFBMatch79},
+--{49326,98385,defScriptFBMatch79},
+--{49326,98416,defScriptFBMatch79},
+--{49295,98319,defScriptFBMatch80},
+--{49295,98352,defScriptFBMatch80},
+--{49295,98385,defScriptFBMatch80},
+--{49263,98289,defScriptFBMatch81},
+--{49263,98319,defScriptFBMatch81},
+--{49264,98353,defScriptFBMatch81},
+--{49230,98159,defScriptFBMatch82},
+--{49231,98192,defScriptFBMatch82},
+--{49230,98225,defScriptFBMatch82},
+--{49230,98257,defScriptFBMatch82},
+--{49231,98289,defScriptFBMatch82},
+--{49230,98321,defScriptFBMatch82},
+--{49199,98193,defScriptFBMatch82},
+--{49199,98225,defScriptFBMatch82},
+--{49200,98257,defScriptFBMatch82},
+--{49263,98128,defScriptFBMatch82},
+--{49263,98161,defScriptFBMatch82},
+--{49263,98193,defScriptFBMatch82},
+--{49295,98095,defScriptFBMatch83},
+--{49295,98126,defScriptFBMatch83},
+--{49296,98159,defScriptFBMatch83},
+--{49326,98062,defScriptFBMatch84},
+--{49327,98097,defScriptFBMatch84},
+--{49326,98128,defScriptFBMatch84},
+--{49358,98031,defScriptFBMatch85},
+--{49359,98064,defScriptFBMatch85},
+--{49359,98096,defScriptFBMatch85},
+--{49390,97999,defScriptFBMatch86},
+--{49391,98031,defScriptFBMatch86},
+--{49391,98064,defScriptFBMatch86},
+--{49422,97967,defScriptFBMatch87},
+--{49423,97999,defScriptFBMatch87},
+--{49424,98031,defScriptFBMatch87},
+--{49455,97935,defScriptFBMatch88},
+--{49455,97968,defScriptFBMatch88},
+--{49456,98000,defScriptFBMatch88},
+--{49487,97902,defScriptFBMatch89},
+--{49487,97936,defScriptFBMatch89},
+--{49487,97969,defScriptFBMatch89},
+--{49519,97870,defScriptFBMatch90},
+--{49519,97903,defScriptFBMatch90},
+--{49519,97934,defScriptFBMatch90},
+--{49550,97838,defScriptFBMatch91},
+--{49550,97872,defScriptFBMatch91},
+--{49551,97904,defScriptFBMatch91},
+--{49582,97807,defScriptFBMatch92},
+--{49583,97839,defScriptFBMatch92},
+--{49583,97871,defScriptFBMatch92},
+--{49615,97775,defScriptFBMatch93},
+--{49615,97809,defScriptFBMatch93},
+--{49615,97839,defScriptFBMatch93},
+--{49646,97743,defScriptFBMatch94},
+--{49647,97776,defScriptFBMatch94},
+--{49647,97809,defScriptFBMatch94},
+--{49678,97711,defScriptFBMatch95},
+--{49679,97744,defScriptFBMatch95},
+--{49679,97776,defScriptFBMatch95},
+--{49711,97679,defScriptFBMatch96},
+--{49711,97710,defScriptFBMatch96},
+--{49711,97745,defScriptFBMatch96},
+--{49742,97646,defScriptFBMatch97},
+--{49743,97680,defScriptFBMatch97},
+--{49743,97713,defScriptFBMatch97},
+--{49775,97616,defScriptFBMatch98},
+--{49775,97648,defScriptFBMatch98},
+--{49774,97682,defScriptFBMatch98},
+--{49806,97583,defScriptFBMatch99},
+--{49806,97617,defScriptFBMatch99},
+--{49806,97647,defScriptFBMatch99},
+--{49839,97551,defScriptFBMatch100},
+--{49839,97584,defScriptFBMatch100},
+--{49839,97615,defScriptFBMatch100},
+--{49871,97519,defScriptFBMatch101},
+--{49871,97551,defScriptFBMatch101},
+--{49872,97584,defScriptFBMatch101},
+--{49903,97486,defScriptFBMatch102},
+--{49903,97519,defScriptFBMatch102},
+--{49903,97552,defScriptFBMatch102},
+--{49935,97454,defScriptFBMatch103},
+--{49935,97488,defScriptFBMatch103},
+--{49935,97520,defScriptFBMatch103},
+--{49967,97423,defScriptFBMatch104},
+--{49967,97455,defScriptFBMatch104},
+--{49969,97487,defScriptFBMatch104},
+--{49998,97391,defScriptFBMatch105},
+--{49999,97422,defScriptFBMatch105},
+--{49999,97456,defScriptFBMatch105},
+--{50031,97360,defScriptFBMatch106},
+--{50032,97392,defScriptFBMatch106},
+--{50032,97424,defScriptFBMatch106},
+--{50063,97327,defScriptFBMatch107},
+--{50063,97360,defScriptFBMatch107},
+--{50063,97392,defScriptFBMatch107},
+--{50095,97295,defScriptFBMatch108},
+--{50096,97328,defScriptFBMatch108},
+--{50096,97359,defScriptFBMatch108},
+--{50126,97263,defScriptFBMatch109},
+--{50126,97296,defScriptFBMatch109},
+--{50127,97328,defScriptFBMatch109},
+--{50158,97232,defScriptFBMatch110},
+--{50158,97263,defScriptFBMatch110},
+--{50159,97296,defScriptFBMatch110},
+--{50191,97198,defScriptFBMatch111},
+--{50191,97230,defScriptFBMatch111},
+--{50191,97264,defScriptFBMatch111},
+--};
+--
+--tbFBBanTrap={
+--{51983,100012},
+--{51983,100044},
+--{51983,100076},
+--{51983,100108},
+--{51983,100140},
+--{51983,100172},
+--{51983,100204},
+--{51983,100236},
+--{51983,100268},
+--{51983,100300},
+--{51983,100332},
+--{51983,100364},
+--{51983,100396},
+--{51983,100428},
+--{51983,100460},
+--{51983,100492},
+--{51983,100524},
+--{51983,100556},
+--{51983,100588},
+--{51983,100620},
+--{51983,100652},
+--{51983,100684},
+--{51983,100716},
+--{51983,100748},
+--{51983,100780},
+--{51983,100812},
+--{51983,100844},
+--{51983,100876},
+--{51983,100908},
+--{51983,100940},
+--{51983,100972},
+--{51983,101004},
+--{51983,101036},
+--{51983,101068},
+--{51983,101100},
+--{51983,101132},
+--{51983,101164},
+--{51983,101196},
+--{51983,101228},
+--{51983,101260},
+--{51983,101292},
+--{51983,101324},
+--{51983,101356},
+--{51983,101388},
+--{51983,101420},
+--{51983,101452},
+--{51983,101484},
+--{51983,101516},
+--{51983,101548},
+--{51983,101580},
+--{51983,101612},
+--{51983,101644},
+--{51983,101676},
+--{51983,101708},
+--{52015,100012},
+--{52015,100044},
+--{52015,100076},
+--{52015,100108},
+--{52015,100140},
+--{52015,100172},
+--{52015,100204},
+--{52015,100236},
+--{52015,100268},
+--{52015,100300},
+--{52015,100332},
+--{52015,100364},
+--{52015,100396},
+--{52015,100428},
+--{52015,100460},
+--{52015,100492},
+--{52015,100524},
+--{52015,100556},
+--{52015,100588},
+--{52015,100620},
+--{52015,100652},
+--{52015,100684},
+--{52015,100716},
+--{52015,100748},
+--{52015,100780},
+--{52015,100812},
+--{52015,100844},
+--{52015,100876},
+--{52015,100908},
+--{52015,100940},
+--{52015,100972},
+--{52015,101004},
+--{52015,101036},
+--{52015,101068},
+--{52015,101100},
+--{52015,101132},
+--{52015,101164},
+--{52015,101196},
+--{52015,101228},
+--{52015,101260},
+--{52015,101292},
+--{52015,101324},
+--{52015,101356},
+--{52015,101388},
+--{52015,101420},
+--{52015,101452},
+--{52015,101484},
+--{52015,101516},
+--{52015,101548},
+--{52015,101580},
+--{52015,101612},
+--{52015,101644},
+--{52015,101676},
+--{52015,101708},
+--{52047,100012},
+--{52079,100012},
+--{52111,100012},
+--{52143,100012},
+--{52175,100012},
+--{52207,100012},
+--{52239,100012},
+--{52271,100012},
+--{52303,100012},
+--{52335,100012},
+--{52367,100012},
+--{52399,100012},
+--{52431,100012},
+--{52463,100012},
+--{52495,100012},
+--{52527,100012},
+--{52559,100012},
+--{52591,100012},
+--{52623,100012},
+--{52655,100012},
+--{52687,100012},
+--{52719,100012},
+--{52751,100012},
+--{52783,100012},
+--{52815,100012},
+--{52847,100012},
+--{52879,100012},
+--{52911,100012},
+--{52943,100012},
+--{52975,100012},
+--{53007,100012},
+--{53039,100012},
+--{53071,100012},
+--{53103,100012},
+--{53135,100012},
+--{53167,100012},
+--{53199,100012},
+--{53231,100012},
+--{53263,100012},
+--{53295,100012},
+--{53327,100012},
+--{53359,100012},
+--{53391,100012},
+--{53423,100012},
+--{53455,100012},
+--{53487,100012},
+--{53519,100012},
+--{53551,100012},
+--{53583,100012},
+--{53615,100012},
+--{53647,100012},
+--{53679,100012},
+--{53711,100012},
+--{53743,100012},
+--{53775,100012},
+--{53807,100012},
+--{53839,100012},
+--{53871,100012},
+--{53903,100012},
+--{53935,100012},
+--{53967,100012},
+--{53999,100012},
+--{54031,100012},
+--{52047,100044},
+--{52079,100044},
+--{52111,100044},
+--{52143,100044},
+--{52175,100044},
+--{52207,100044},
+--{52239,100044},
+--{52271,100044},
+--{52303,100044},
+--{52335,100044},
+--{52367,100044},
+--{52399,100044},
+--{52431,100044},
+--{52463,100044},
+--{52495,100044},
+--{52527,100044},
+--{52559,100044},
+--{52591,100044},
+--{52623,100044},
+--{52655,100044},
+--{52687,100044},
+--{52719,100044},
+--{52751,100044},
+--{52783,100044},
+--{52815,100044},
+--{52847,100044},
+--{52879,100044},
+--{52911,100044},
+--{52943,100044},
+--{52975,100044},
+--{53007,100044},
+--{53039,100044},
+--{53071,100044},
+--{53103,100044},
+--{53135,100044},
+--{53167,100044},
+--{53199,100044},
+--{53231,100044},
+--{53263,100044},
+--{53295,100044},
+--{53327,100044},
+--{53359,100044},
+--{53391,100044},
+--{53423,100044},
+--{53455,100044},
+--{53487,100044},
+--{53519,100044},
+--{53551,100044},
+--{53583,100044},
+--{53615,100044},
+--{53647,100044},
+--{53679,100044},
+--{53711,100044},
+--{53743,100044},
+--{53775,100044},
+--{53807,100044},
+--{53839,100044},
+--{53871,100044},
+--{53903,100044},
+--{53935,100044},
+--{53967,100044},
+--{53999,100044},
+--{54031,100044},
+--{54031,100076},
+--{54031,100108},
+--{54031,100140},
+--{54031,100172},
+--{54031,100204},
+--{54031,100236},
+--{54031,100268},
+--{54031,100300},
+--{54031,100332},
+--{54031,100364},
+--{54031,100396},
+--{54031,100428},
+--{54031,100460},
+--{54031,100492},
+--{54031,100524},
+--{54031,100556},
+--{54031,100588},
+--{54031,100620},
+--{54031,100652},
+--{54031,100684},
+--{54031,100716},
+--{54031,100748},
+--{54031,100780},
+--{54031,100812},
+--{54031,100844},
+--{54031,100876},
+--{54031,100908},
+--{54031,100940},
+--{54031,100972},
+--{54031,101004},
+--{54031,101036},
+--{54031,101068},
+--{54031,101100},
+--{54031,101132},
+--{54031,101164},
+--{54031,101196},
+--{54031,101228},
+--{54031,101260},
+--{54031,101292},
+--{54031,100076},
+--{53999,100076},
+--{53999,100108},
+--{53999,100140},
+--{53999,100172},
+--{53999,100204},
+--{53999,100236},
+--{53999,100268},
+--{53999,100300},
+--{53999,100332},
+--{53999,100364},
+--{53999,100396},
+--{53999,100428},
+--{53999,100460},
+--{53999,100492},
+--{53999,100524},
+--{53999,100556},
+--{53999,100588},
+--{53999,100620},
+--{53999,100652},
+--{53999,100684},
+--{53999,100716},
+--{53999,100748},
+--{53999,100780},
+--{53999,100812},
+--{53999,100844},
+--{53999,100876},
+--{53999,100908},
+--{53999,100940},
+--{53999,100972},
+--{53999,101004},
+--{53999,101036},
+--{53999,101068},
+--{53999,101100},
+--{53999,101132},
+--{53999,101164},
+--{53999,101196},
+--{53999,101228},
+--{53999,101260},
+--{53999,101292},
+--};
