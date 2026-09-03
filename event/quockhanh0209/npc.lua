@@ -38,7 +38,7 @@ function main(nNpcIdx)
 	local ntype = GetNpcTask(nNpcIdx, 0);
 	if ntype == 1 then -- main event
 		if (QKLib_isEnd()) then
-			Talk(1, "", QK_getMsg().End);
+			Talk(1, "", QKLib_getMsg().End);
 			return
 		end
 		local tBtn = {};
@@ -48,7 +48,9 @@ function main(nNpcIdx)
 		local nChienThang,MaxCT = QK_GetUseCount(1);
 		local nChienCong,MaxCC  = QK_GetUseCount(2);
 		local nAnhDung,MaxAD    = QK_GetUseCount(3);
-		local tbEnd       = QKLib_getMsg().End
+		local tbEnd       = QKLib_getTime().End
+		if (tbEnd.h == nil) then tbEnd.h = 0 end
+		if (tbEnd.M == nil) then tbEnd.M = 0 end
 		SayNew(
 			"Ta phÙ tr∏ch S˘ Ki÷n QuËc Kh∏nh 2-9, c∏c vÀt ph»m s˘ ki÷n xu t hi÷n kh¿p giang hÂ:\n+ Qu©n Trang Chi’n Th¿ng ( <color=green>" ..
 			nChienThang ..

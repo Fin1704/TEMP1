@@ -66,10 +66,7 @@ local QK_RUONG_MANH_INI = "event\\quockhanh0209\\counterRuongManh.ini"
 local QK_RUONG_MANH_DATA = nil
 function QK_GetRuongManhCount(szRole)
     if (szRole == nil or szRole == "") then szRole = GetName() end
-    local nVal
-    if QK_RUONG_MANH_DATA then
-        local nVal = GetIniInt(QK_RUONG_MANH_INI, "Count", szRole)
-    end
+    local nVal = GetIniInt(QK_RUONG_MANH_INI, "Count", szRole)
     if (nVal == nil) then nVal = 0 end
     return nVal
 end

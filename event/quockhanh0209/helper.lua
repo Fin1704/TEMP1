@@ -614,7 +614,7 @@ function QK_GetTop1Personal()
 	local top1 = CacheOT:Get("DiemTop1KNQK")
 	local nameTop1 = CacheOT:Get("NameTop1KNQK")
 	if top1 and nameTop1 then
-		return top1, nameTop1
+		return nameTop1, top1
 	end
 	local c = QK_GetKhaoNghiem()
 	local list = QKSifu_Get_VongHoa(c.PersonalFile, "PersonalLadder", "LIST")
@@ -636,7 +636,7 @@ function QK_GetTop1Personal()
 	sort(rows, QK_KNCompare)
 	if (getn(rows) > 0 and rows[1] ~= nil and rows[1][1] ~= "") then
 		CacheOT:Set("DiemTop1KNQK", rows[1][2], 1)
-		CacheOT:Set("NameTop1KNQK", ows[1][1], 1)
+		CacheOT:Set("NameTop1KNQK", rows[1][1], 1)
 		return rows[1][1], rows[1][2]
 	end
 	return "Ch­a X¸c §Þnh", 0
