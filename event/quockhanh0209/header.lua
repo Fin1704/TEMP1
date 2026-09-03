@@ -25,9 +25,10 @@ QK_Enum_LVL = {
 	LV_9X = 2,
 }
 --https://www.uuid.lol/cuid2 
-local EVENT_iyaabda66e6ng0v3ckgjqkna = {
-    Time = {
-		Start = {
+EVENT_iyaabda66e6ng0v3ckgjqkna = EVENT_iyaabda66e6ng0v3ckgjqkna or {}
+EVENT_iyaabda66e6ng0v3ckgjqkna.KhaoNghiem = {GuildFile="event\\quockhanh0209\\BangHoi.ini", PersonalFile="event\\quockhanh0209\\CaNhan.ini", GuildLimit=200, GuildExp=100000, JoinDay=3}
+EVENT_iyaabda66e6ng0v3ckgjqkna.Time ={
+Start = {
 			y=2026,
 			m=9,
 			d=1,
@@ -43,15 +44,13 @@ local EVENT_iyaabda66e6ng0v3ckgjqkna = {
 			d = 26
 		}
 
-    },
-    Msg = {
+}
+EVENT_iyaabda66e6ng0v3ckgjqkna.Msg = {
         LimitBag = 2,
         BagFull = "CÇn Ýt nhÊt 2 « trèng trong hµnh trang.",
         End = "<color=red>Sù kiÖn Quèc Kh¸nh kÕt thóc.<color>",
         EndedKN = "<color=red>Kh¶o nghiÖm Quèc Kh¸nh kÕt thóc.<color>",
-    },
-    KhaoNghiem = {GuildFile="event\\quockhanh0209\\BangHoi.ini", PersonalFile="event\\quockhanh0209\\CaNhan.ini", GuildLimit=200, GuildExp=100000, JoinDay=3}
-}
+    }
 EVENT_iyaabda66e6ng0v3ckgjqkna.Recipe={
 	[QK_Enum_EventItem.QuanTrangChienThang]={
         { Item = QK_Enum_EventItem.AoQuanNhan,     Need = 1 },
@@ -329,7 +328,7 @@ QK_REWARD = {
 	TU_VA_HAO_KHI = 140,
 }
 
-local QK_REWARD_DESC = {
+QK_REWARD_DESC = {
 	[QK_REWARD.TU_VA_HAO_KHI] = { 0, 6, 2, 5020, 0, 5, 1, 0},
 	[QK_REWARD.BOSS_XANH] = { 0, 6, 1, 4992, 0, 5, 1, 0 },
 	[QK_REWARD.HUAN_CHUONG_DOC_LAP] = { 0, 6, 3, 5010, 0, 5, 1, 0 },

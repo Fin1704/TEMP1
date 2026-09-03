@@ -2,7 +2,7 @@ Include("\\script\\event\\quockhanh0209\\helper.lua")
 Include("\\script\\event\\quockhanh0209\\buy.lua")
 Include("\\script\\event\\quockhanh0209\\crafting.lua")
 
-local tbMenu_Main = {
+tbMenu_Main = {
 	{
 		"Gh–p BÈ Qu©n Trang", "#QK_ShowCraftDialog()",
 		{
