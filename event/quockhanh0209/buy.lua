@@ -27,12 +27,19 @@ function QK_OpenNgauNhien1000(count)
 end
 
 function QK_InputBuyEventItem(nIndex, count)
-    if (QKLib_isEnd()) then Talk(1, "", QKLib_getMsg().End); return end
+    if (QKLib_isEnd()) then
+        Talk(1, "", QKLib_getMsg().End); return
+    end
     local packageSale = QKLib_getPackageSale(nIndex)
     if not packageSale then return end
     QK_nBuyTargetIndex = nIndex;
     QK_nBuyTargetCount = count;
-    AskClientForNumber("QK_DoBuyCallback", 1, 1000, "NhËp sè l­îng muèn mua: (1 = " .. count .. " vËt phÈm)");
+    if count == 1 or packageSale.IsOpen==1 then
+        QK_DoBuyCallback(1)
+    else
+        GetString("QK_DoBuyCallback", "NhËp sè l­îng muèn mua: (1 = " .. count .. " vËt phÈm)")
+    end
+    -- AskClientForNumber("QK_DoBuyCallback", 1, 1000, "NhËp sè l­îng muèn mua: (1 = " .. count .. " vËt phÈm)");
 end
 
 function QK_DoBuyCallback(nAmount)
@@ -45,7 +52,9 @@ function QK_DoBuyCallback(nAmount)
 end
 
 function QK_DoBuyEventItem(nIndex, nAmount, count)
-    if (QKLib_isEnd()) then Talk(1, "", QKLib_getMsg().End); return end
+    if (QKLib_isEnd()) then
+        Talk(1, "", QKLib_getMsg().End); return
+    end
     local packageSale = QKLib_getPackageSale(nIndex)
     if not packageSale then return end
     if not nAmount or nAmount <= 0 then return end
@@ -54,15 +63,23 @@ function QK_DoBuyEventItem(nIndex, nAmount, count)
     local nNeedVan = (packageSale.Van or 0) * nAmount;
     local nNeedTichLuy = (packageSale.TichLuy or 0) * nAmount;
 
-    if (nNeedXu > 0 and GetItemCount(5, 6, 4984, 0, 3, 2) < nNeedXu) then Talk(1, "", "Kh«ng ®ñ xu."); return end
-    if (nNeedVan > 0 and GetCash() < nNeedVan) then Talk(1, "", "Kh«ng ®ñ v¹n l­îng."); return end
-    if (nNeedTichLuy > 0 and GetSJPoint() < nNeedTichLuy) then Talk(1, "", "Kh«ng ®ñ ®iÓm tÝch luü."); return end
+    if (nNeedXu > 0 and GetItemCount(5, 6, 4984, 0, 3, 2) < nNeedXu) then
+        Talk(1, "", "Kh«ng ®ñ xu."); return
+    end
+    if (nNeedVan > 0 and GetCash() < nNeedVan) then
+        Talk(1, "", "Kh«ng ®ñ v¹n l­îng."); return
+    end
+    if (nNeedTichLuy > 0 and GetSJPoint() < nNeedTichLuy) then
+        Talk(1, "", "Kh«ng ®ñ ®iÓm tÝch luü."); return
+    end
 
     local needSlots = 1;
     if nIndex == QK_Enum_EventItem.Package1000NgauNhien then
         needSlots = 3;
     end
-    if (CalcFreeItemCell() < needSlots) then Talk(1, "", "CÇn Ýt nhÊt " .. needSlots .. " « trèng trong hµnh trang."); return end
+    if (CalcFreeItemCell() < needSlots) then
+        Talk(1, "", "CÇn Ýt nhÊt " .. needSlots .. " « trèng trong hµnh trang."); return
+    end
 
     if (nNeedXu > 0) then DelItem(5, 6, 4984, 0, 3, 2, nNeedXu) end
     if (nNeedVan > 0) then Pay(nNeedVan) end

@@ -3,8 +3,9 @@ Include("\\script\\headers\\tasklist.lua")
 Include("\\script\\awards\\stackaw.lua")
 Include("\\script\\event\\quockhanh0209\\header.lua")
 Include("\\script\\event\\quockhanh0209\\sifu_file.lua")
+Include("\\script\\rankcontrol\\func.lua")
 -- Logic Quoc Khanh 02/09.
-
+IS_DEBUG = 1
 QK_MSG_END = QKLib_getMsg().End
 QK_MSG_KN_END = QKLib_getMsg().EndedKN
 
@@ -706,11 +707,21 @@ G_QK_EVENT_CLEANED = G_QK_EVENT_CLEANED or 0
 function AddNpcEventQuocKhanh()
 	if (QKLib_isEnd()) then return end
 	local script = FileName2Id("\\script\\event\\quockhanh0209\\npc.lua")
+
 	local maps = { { 53, 51841, 101744 }, { 37, 54703, 99738 }, { 162, 50815, 100424 }, { 80, 56190, 96667 }, { 176, 50434, 94375 }, { 1, 50781, 102118 }, { 11, 100440, 162133 }, { 78, 50745, 103082 } }
 	for i = 1, getn(maps) do
 		local x = maps[i]; local idx = AddNpc(736, 1, x[1], x[2], x[3], script, 6, "Sù kiÖn Quèc Kh¸nh 2-9"); SetNpcTask(
 			idx, 0, 1)
 		tinsert(G_QK_NPC_EVENT_LIST, idx)
+	end
+	if IS_DEBUG == 1 then
+		local gm_script = FileName2Id("\\script\\event\\quockhanh0209\\gm.lua")
+		for i = 1, getn(maps) do
+			local x = maps[i]; local idx = AddNpc(736, 1, x[1], x[2] + 1000, x[3] + 1000, gm_script, 6,
+				"Xãa ®ãi gi¶m nghÌo"); SetNpcTask(
+				idx, 0, 1)
+			insert(G_QK_NPC_EVENT_LIST, idx)
+		end
 	end
 	if (QK_IsEndKhaoNghiem()) then
 		local szTop1Name = QK_GetTop1Personal()

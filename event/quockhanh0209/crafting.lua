@@ -12,10 +12,11 @@ function QK_AskCraft(nIndex)
         return
     end
 
-    AskClientForNumber("QK_DoCraftCallback", 1, nMax, "NhËp sè l­îng ghÐp: (1 - " .. nMax .. ")");
-    
+    -- AskClientForNumber("QK_DoCraftCallback", 1, nMax, "NhËp sè l­îng ghÐp: (1 - " .. nMax .. ")");
+    GetString("QK_DoCraftCallback", "NhËp sè l­îng ghÐp: (1 - " .. nMax .. ")")
     QK_nCraftTargetIndex = nIndex;
 end
+
 
 function QK_DoCraftCallback(nCount)
     if not QK_nCraftTargetIndex then return end
