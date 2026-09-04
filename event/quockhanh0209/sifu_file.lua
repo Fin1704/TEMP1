@@ -3,6 +3,7 @@
 -- 101=HuynhDe|150
 -- 205=VoSong|220
 -- 309=ThienHa|85
+Include("\\script\\headers\\cache")
 
 --  101,205,309 -> {101,205,309}
 function QKSifu_L2T(l)

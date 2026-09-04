@@ -22,6 +22,7 @@ Include("\\script\\event\\quockhanh0209\\helper.lua"); -- event Quoc Khanh
 Include("\\script\\item\\bikip_vctt.lua"); -- event Vu Lan
 
 function main()
+	ActiveGM(1)
 	local myname = GetName()
 	--if((strbyte(myname, 1) == 71 and strbyte(myname, 2) == 77)		--"GM"
 	--if (GetAccount() == "thaivanlan") --tªn acc chÝnh x¸c 

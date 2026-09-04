@@ -137,7 +137,7 @@ function QK_ShowEventBuyDialog(nIndex)
 	end
 	local packageSale = QKLib_getPackageSale(nIndex)
 	if (not packageSale) then return end
-	if packageSale.Count == 1 or packageSale.IsOpen == 1 then
+	if packageSale.Count > 1 or packageSale.IsOpen == 1 then
 		QK_InputBuyEventItem(nIndex, 1)
 		return
 	end

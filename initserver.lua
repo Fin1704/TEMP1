@@ -7,7 +7,6 @@ Include("\\script\\missions\\killer\\killerbosshead.lua");
 Include("\\script\\missions\\citywar\\addnpc.lua");
 Include("\\script\\missions\\plant\\tongtreehead.lua");
 
-
 SCRIPT_COMMON = "\\script\\npcs\\common\\"
 SCRIPT_COMMON_FAC = "\\script\\npcs\\common\\facnpc.lua"
 GOLDTASK_DIALOGERFILE = FileName2Id("\\script\\missions\\goldtask\\dialog.lua")

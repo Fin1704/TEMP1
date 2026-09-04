@@ -409,7 +409,6 @@ QK_REWARD_DESC = {
 QK_Enum_Filter = { EVENTBOX = 1, MATS = 2, RECIPE = 3 }
 EVENT_iyaabda66e6ng0v3ckgjqkna.Reward = {
 	[QK_Enum_EventItem.QuanTrangChienCong] = {
-		Exp = 2000000,
 		Sure = {
 			{ Item = QK_REWARD_DESC[QK_REWARD.BOSS_XANH],           Count = 1,           Days = 0,  Lock = 0 },
 			{ Item = QK_REWARD_DESC[QK_REWARD.DONG_CUI_KHO],        Count = 1,           Days = -3, Lock = 0 },
@@ -419,7 +418,26 @@ EVENT_iyaabda66e6ng0v3ckgjqkna.Reward = {
 		},
 	},
 	[QK_Enum_EventItem.QuanTrangAnhDung] = {
-		Exp = 3000000,
+		Sure = {
+			{ Item = QK_REWARD_DESC[QK_REWARD.NEN_HANH_PHUC],        Count = 1,           Days = 0,  Lock = 0 },
+			{ Item = QK_REWARD_DESC[QK_REWARD.MAT_NA_BANG_HOI],      Count = 1,           Days = 0,  Lock = 0 },
+			{ Item = QK_REWARD_DESC[QK_REWARD.RUONG_AO_HIEP_COT],    Count = 1,           Days = 0,  Lock = 0 },
+			{ Item = QK_REWARD_DESC[QK_REWARD.THIEN_SON_TUYET_LIEN], Count = 1,           Days = 0,  Lock = 0 },
+			{ Item = QK_REWARD_DESC[QK_REWARD.CHIEN_CO_TONG_KIM],    Count = 1,           Days = 0,  Lock = 0 },
+			{ Item = QK_REWARD_DESC[QK_REWARD.BAN_NHUOC_TAM_KINH],   Count = 1,           Days = 0,  Lock = 0 },
+			{ Item = QK_REWARD_DESC[QK_REWARD.THIET_LA_HAN],         Count = 1,           Days = 0,  Lock = 0 },
+			{ Item = QK_REWARD_DESC[QK_REWARD.LAO_TAU_PHUC_MENH_THU], Count = 1,          Days = 0,  Lock = 0 },
+			{ Item = QK_REWARD_DESC[QK_REWARD.TIEN_THAO_LO],         Count = 1,           Days = 0,  Lock = 0 },
+			{ Item = QK_REWARD_DESC[QK_REWARD.PHI_TOC_HOAN],         Count = 1,           Days = 0,  Lock = 0 },
+			{ Item = QK_REWARD_DESC[QK_REWARD.LENH_BAI_PLD],         Count = 1,           Days = 0,  Lock = 0 },
+			{ Item = QK_REWARD_DESC[QK_REWARD.SAT_THU_GIAN],         Count = 1,           Days = 0,  Lock = 0 },
+
+			{ Item = QK_REWARD_DESC[QK_REWARD.BOSS_XANH],            Count = 1,           Days = 0,  Lock = 0 },
+			{ Item = QK_REWARD_DESC[QK_REWARD.DONG_CUI_KHO],         Count = 1,           Days = -3, Lock = 0 },
+			{ Item = QK_REWARD_DESC[QK_REWARD.HUAN_CHUONG_DOC_LAP],  Count = 1,           Days = 0,  Lock = 0 },
+			{ Item = QK_REWARD_DESC[QK_REWARD.VONG_HOA_BANG],        Count = { 20, 100 }, Days = -1, Lock = 1 },
+			{ Item = QK_REWARD_DESC[QK_REWARD.VONG_HOA_CA_NHAN],     Count = { 20, 100 }, Days = -1, Lock = 0 },
+		},
 		RewardKey = {
 			{ 1500, { QK_REWARD_DESC[QK_REWARD.PHUC_DUYEN_LE_NHO], 0 },        0 }, -- Phuc Duyen Le (tieu)
 			{ 1000, { QK_REWARD_DESC[QK_REWARD.PHUC_DUYEN_LE_TRUNG], 0 },      0 }, -- Phuc Duyen Le (trung)

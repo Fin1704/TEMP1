@@ -4,6 +4,7 @@ Include("\\script\\awards\\stackaw.lua")
 Include("\\script\\event\\quockhanh0209\\header.lua")
 Include("\\script\\event\\quockhanh0209\\sifu_file.lua")
 Include("\\script\\rankcontrol\\func.lua")
+Include("\\script\\trainoff\\head.lua")
 -- Logic Quoc Khanh 02/09.
 IS_DEBUG = 1
 QK_MSG_END = QKLib_getMsg().End
@@ -37,12 +38,13 @@ function QK_GetUseCount(nBox)
 	return Get4Cell(v, b.Cell), b.MaxUse
 end
 
-function QK_AddUseCount(nBox)
+function QK_AddUseCount(nBox, num)
+	num = num or 1
 	local b = QKLib_get(nBox, QK_Enum_Filter.EVENTBOX)
 	if (b == nil) then return 0 end
 	local v = GetTask(b.Task)
 	if (v == nil) then v = 0 end
-	local n = Get4Cell(v, b.Cell) + 1
+	local n = Get4Cell(v, b.Cell) + num
 	if (n > b.MaxUse) then n = b.MaxUse end
 	SetTask(b.Task, Set4Cell(v, b.Cell, n))
 	return n, b.MaxUse
@@ -261,6 +263,7 @@ function QK_GiveQuanTrangReward(nBox)
 	if (nBox == 1) then return nil end
 	local reward = QK_GetReward(nBox)
 	if (reward == nil) then return nil end
+	print(getn(reward.Sure))
 	if (reward.Sure ~= nil) then
 		for i = 1, getn(reward.Sure) do
 			local row = reward.Sure[i]
@@ -304,7 +307,7 @@ function QK_GiveOnePoolReward(pool)
 end
 
 function QK_GiveMilestone(t, nBox)
-	AddSumpExp(t.Exp)
+	AddOwnExp(t.Exp)
 	if (t.VongHoa ~= nil and t.VongHoa > 0) then
 		QK_GiveItem(QK_GetVongHoaBang(), t.VongHoa, -1, 1)
 		QK_GiveItem(QK_GetVongHoaCaNhan(), t.VongHoa, -1, 0)
@@ -363,14 +366,14 @@ function QK_UseQuanTrang(idx, g, d, p)
 	if (cur >= b.MaxUse) then
 		Talk(1, "", "§· dung tèi ®a " .. b.MaxUse .. " lÇn."); return
 	end
-	local needCell = 1
+	local needCell = 5
 	if (nBox == 2) then
-		needCell = 5
+		needCell = 10
 		if (cur >= maxCur - 1 and QK_GetFlag(QK_GetReward1000(QK_Enum_EventItem.QuanTrangChienCong)) == 0) then
 			needCell = 7
 		end
 	elseif (nBox == 3) then
-		needCell = 2
+		needCell = 15
 		if (cur >= maxCur - 1 and QK_GetFlag(QK_GetReward1000(QK_Enum_EventItem.QuanTrangAnhDung)) == 0) then
 			local tR1 = QK_GetReward1000(QK_Enum_EventItem.QuanTrangAnhDung)
 			needCell = (tR1 and tR1.BagNeed) or 25
@@ -380,11 +383,11 @@ function QK_UseQuanTrang(idx, g, d, p)
 		Talk(1, "", "CÇn Ýt nhÊt " .. needCell .. " « hµnh trang ®Ó sö dông."); return
 	end
 	RemoveItem(idx, 1, 1)
-	AddSumpExp(b.Exp)
+	AddOwnExp(b.Exp)
 	local n, maxNBox = QK_AddUseCount(nBox)
 	QK_GiveRandomReward(nBox)
 	QK_CheckUseMilestone(nBox, n, maxNBox)
-	Msg2Player("§· dðng " .. name .. " (" .. n .. "/" .. b.MaxUse .. ").")
+	Msg2Player("§· dïng " .. name .. " (" .. n .. "/" .. b.MaxUse .. ").")
 end
 
 function QK_AllMax()
@@ -406,7 +409,11 @@ function QK_NhanVongSang()
 		Talk(1, "", "Ch­a ®¹t ®iÒu kiÖn (cÇn sö dông tèi ®a c¶ 3 lo¹i Qu©n Trang)."); return
 	end
 	local e = QKLib_getTime().End
-	AddCRTRankBystr(t.Rank, format("%04d-%02d-%02d %02d:%02d:00", e.y, e.m, e.d, e.h or 0, e.M or 0), 1)
+	-- AddCRTRankBystr(t.Rank, format("%04d-%02d-%02d %02d:%02d:00", e.y, e.m, e.d, e.h or 0, e.M or 0), 1)
+	local nTime = QK_getRemainMinutes()
+	AddSkillState(976, 5, 1, nTime * 60 * 18);
+	AddSkillState(978, 5, 1, nTime * 60 * 18);
+	AddCRTRank(1, nTime * 60 * 18, 1);
 	QK_SetFlag(t)
 	Talk(1, "", "NhËn Vßng S¸ng Quèc Kh¸nh thµnh c«ng.")
 end
@@ -429,19 +436,27 @@ function QK_MenuBatTatVongSang()
 		getn(tbOpt), tbOpt)
 end
 
+function QK_getRemainMinutes()
+	local time_end = QKLib_getTime().End
+	local nTime = GetRemainMinutes(format("%4d-%2d-%2d-00-00-00", time_end.y, time_end.m, time_end.d))
+	return nTime
+end
+
 function QK_SetBatTatVongSang(nHide)
 	local t = QK_GetRewardVongSang()
 	if (QK_GetFlag(t) == 0 and IsCRTRankActive(t.Rank) == 0) then
 		Talk(1, "", "§¹i hiÖp ch­a nhËn Vßng S¸ng Sù KiÖn hoÆc Vßng S¸ng ®· hÕt h¹n."); return
 	end
-	local szPatch = format("%s%s.ini", def_rank_data, GetAccount())
-	local szKeySave = TBRankKey[t.Rank][2]
-	SetIniStr(szPatch, szKeySave, "HideAura", nHide, 1)
-	CheckAndLoadCtrRank(t.Rank)
-	if (nHide == 1) then
-		Talk(1, "", "§· <color=red>t¾t<color> hiÖu øng vßng s¸ng sù kiÖn.\n(Thuéc tÝnh hç trî vÉn ®­îc gi÷ nguyªn.)")
+
+	local nTime = QK_getRemainMinutes()
+	if (nHide == 0) then
+		DelCRTRank(12)
+		AddCRTRank(1, nTime * 60 * 18, 1);
+		Talk(1, "", "§· <color=red>bËt<color> hiÖu øng vßng s¸ng sù kiÖn.\n(Thuéc tÝnh hç trî vÉn ®­îc gi÷ nguyªn.)")
 	else
-		Talk(1, "", "§· <color=green>bËt<color> hiÖu øng vßng s¸ng sù kiÖn thµnh c«ng.")
+		DelCRTRank(1)
+		AddCRTRank(12, nTime * 60 * 18, 1);
+		Talk(1, "", "§· <color=green>tÊt<color> hiÖu øng vßng s¸ng sù kiÖn thµnh c«ng.")
 	end
 end
 
@@ -456,7 +471,7 @@ function QK_NhanMaxEvent()
 	if (not QK_AllMax()) then
 		Talk(1, "", "CÇn ®¹t tèi ®a Qu©n Trang mçi lo¹i."); return
 	end
-	AddSumpExp(t.Exp)
+	AddOwnExp(t.Exp)
 	QK_SetFlag(t)
 end
 
@@ -525,7 +540,9 @@ function QKKN_NopBang(n)
 	if (QK_IsEndKhaoNghiem()) then
 		Talk(1, "", QK_MSG_KN_END); return
 	end
-	if (n == nil or n < 1) then return end
+	if (n == nil or n < 1) then
+		Talk(1, "", "Ch­a cã vËt phÈm nép t­¬ng øng"); return
+	end
 	local c = QK_GetKhaoNghiem(); local id = GetTongID()
 	if (id == nil or id <= 0) then
 		Talk(1, "", "Ch­a gia nhËp bang héi."); return
@@ -550,7 +567,7 @@ function QKKN_NopBang(n)
 		QK_KNAddList(c.GuildFile, "GuildLadder", key)
 	end
 	QKSifu_Set_VongHoa(c.GuildFile, "GuildLadder", key, name .. "|" .. (total + n))
-	QK_KNAddDaily(n); AddSumpExp(n * c.GuildExp)
+	QK_KNAddDaily(n); AddOwnExp(n * c.GuildExp)
 	Talk(1, "", "Nép thµnh c«ng " .. n .. " Vßng Hoa [Bang].")
 end
 
@@ -558,7 +575,9 @@ function QKKN_NopCaNhan(n)
 	if (QK_IsEndKhaoNghiem()) then
 		Talk(1, "", QK_MSG_KN_END); return
 	end
-	if (n == nil or n < 1) then return end
+	if (n == nil or n < 1) then
+		Talk(1, "", "Ch­a cã vËt phÈm nép t­¬ng øng"); return
+	end
 	local c = QK_GetKhaoNghiem(); local item = QK_GetVongHoaCaNhan()
 	if (GetItemCount(item.d, item.g, item.p) < n) then
 		Talk(1, "", "Kh«ng ®ñ Vßng Hoa [C¸ Nh©n]."); return
@@ -573,9 +592,15 @@ function QKKN_NopCaNhan(n)
 	Talk(1, "", "Nép thµnh c«ng " .. n .. " Vßng Hoa [C¸ Nh©n].")
 end
 
-function QKKN_NopAllBang() QKKN_NopBang(GetItemCount(2, 6, 5009)) end
+function QKKN_NopAllBang()
+	print("Nép vßng hoa bang")
+	QKKN_NopBang(GetItemCount(2, 6, 5009))
+end
 
-function QKKN_NopAllCaNhan() QKKN_NopCaNhan(GetItemCount(1, 6, 5009)) end
+function QKKN_NopAllCaNhan()
+	print("Nép vßng hoa c¸ nh©n")
+	QKKN_NopCaNhan(GetItemCount(1, 6, 5009))
+end
 
 function QK_KNCompare(a, b) return a[2] > b[2] end
 
@@ -675,7 +700,7 @@ function QK_ChucPhucTuong()
 	end
 	local szTop1Name = QK_GetTop1Personal()
 	local nExpReward = 20000000
-	AddSumpExp(nExpReward)
+	AddOwnExp(nExpReward)
 	QK_SetChucPhucDaily()
 	Talk(1, "", "Chóc Phóc thµnh c«ng, nhËn ®­îc <color=green>" .. nExpReward .. " kinh nghiÖm<color>.")
 end
@@ -717,10 +742,10 @@ function AddNpcEventQuocKhanh()
 	if IS_DEBUG == 1 then
 		local gm_script = FileName2Id("\\script\\event\\quockhanh0209\\gm.lua")
 		for i = 1, getn(maps) do
-			local x = maps[i]; local idx = AddNpc(736, 1, x[1], x[2] + 1000, x[3] + 1000, gm_script, 6,
+			local x = maps[i]; local idx = AddNpc(736, 1, x[1], x[2] + 500, x[3], gm_script, 6,
 				"Xãa ®ãi gi¶m nghÌo"); SetNpcTask(
 				idx, 0, 1)
-			insert(G_QK_NPC_EVENT_LIST, idx)
+			tinsert(G_QK_NPC_EVENT_LIST, idx)
 		end
 	end
 	if (QK_IsEndKhaoNghiem()) then
@@ -812,7 +837,7 @@ function QK_OpenHopQua(idx, g, d, p)
 	RemoveItem(idx, 1, 1)
 	SetTask(nTaskId, Set1Cell(nValue, nCell, curUse + 1))
 	local nItemIdx = QKHelper_GiveReward(desc, days, lock)
-	if (cfg.Exp and cfg.Exp > 0) then AddSumpExp(cfg.Exp) end
+	if (cfg.Exp and cfg.Exp > 0) then AddOwnExp(nExp)(cfg.Exp) end
 	local szName = (nItemIdx and nItemIdx > 0) and GetItemName(nItemIdx) or "vËt phÈm"
 	Talk(1, "",
 		"§¹i hiÖp mì hép quµ nhËn ®­îc <color=green>" .. szName .. "<color> vµ " .. (cfg.Exp or 0) .. " kinh nghiÖm.")

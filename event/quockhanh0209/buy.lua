@@ -34,7 +34,7 @@ function QK_InputBuyEventItem(nIndex, count)
     if not packageSale then return end
     QK_nBuyTargetIndex = nIndex;
     QK_nBuyTargetCount = count;
-    if count == 1 or packageSale.IsOpen==1 then
+    if packageSale.Count > 1 or packageSale.IsOpen == 1 then
         QK_DoBuyCallback(1)
     else
         GetString("QK_DoBuyCallback", "NhËp sè l­îng muèn mua: (1 = " .. count .. " vËt phÈm)")
@@ -48,10 +48,28 @@ function QK_DoBuyCallback(nAmount)
     local count = QK_nBuyTargetCount or 1;
     QK_nBuyTargetIndex = nil;
     QK_nBuyTargetCount = nil;
-    QK_DoBuyEventItem(nIndex, nAmount, count);
+    local packageSale = QKLib_getPackageSale(nIndex)
+    local DonGia = ""
+    if packageSale.Xu then
+        DonGia = DonGia .. nAmount * packageSale.Xu .. " Xu\n"
+    end
+    if packageSale.Van then
+        DonGia = DonGia .. nAmount * packageSale.Van .. " V¹n l­îng\n"
+    end
+    if packageSale.TichLuy then
+        DonGia = DonGia .. nAmount * packageSale.TichLuy .. " TÝch lòy\n"
+    end
+    Say("B¹n x¸c nhËn mua " .. (nAmount > 1 and (nAmount .. "x ") or "") .. packageSale.Name .. " chø?", 2,
+        DonGia .. "/#QK_DoBuyEventItem(" .. nIndex .. "," .. nAmount .. "," .. count .. ")",
+        "Kh«ng mua/no")
+    -- QK_DoBuyEventItem(nIndex, nAmount, count);
 end
 
-function QK_DoBuyEventItem(nIndex, nAmount, count)
+function no()
+
+end
+
+function QK_DoBuyEventItem(nIndex, nAmount)
     if (QKLib_isEnd()) then
         Talk(1, "", QKLib_getMsg().End); return
     end
@@ -72,8 +90,8 @@ function QK_DoBuyEventItem(nIndex, nAmount, count)
     if (nNeedTichLuy > 0 and GetSJPoint() < nNeedTichLuy) then
         Talk(1, "", "Kh«ng ®ñ ®iÓm tÝch luü."); return
     end
-
-    local needSlots = 1;
+    local svp = nAmount * packageSale.Count
+    local needSlots = floor(svp / 500) + 1;
     if nIndex == QK_Enum_EventItem.Package1000NgauNhien then
         needSlots = 3;
     end
@@ -83,13 +101,13 @@ function QK_DoBuyEventItem(nIndex, nAmount, count)
 
     if (nNeedXu > 0) then DelItem(5, 6, 4984, 0, 3, 2, nNeedXu) end
     if (nNeedVan > 0) then Pay(nNeedVan) end
-    if (nNeedTichLuy > 0) then SetSJPoint(GetSJPoint() - nNeedTichLuy) end
+    if (nNeedTichLuy > 0) then AddSJPoint(-nNeedTichLuy) end
+    Talk(1, "", "Mua thµnh c«ng <color=green>" .. packageSale.Name .. "<color>.")
 
     if nIndex == QK_Enum_EventItem.Package1000NgauNhien then
         QK_OpenNgauNhien1000(nAmount)
     else
         local outItem = QK_getMat(nIndex);
-        QK_GiveItem(outItem, nAmount * count, 0, 0)
+        QK_GiveItem(outItem, nAmount * packageSale.Count, 0, 0)
     end
-    Talk(1, "", "Mua thµnh c«ng <color=green>" .. packageSale.Name .. "<color>.")
 end

@@ -58,34 +58,49 @@ function ActiveFullRank()
 	end
 end
 
+-- function CheckAndLoadCtrRank(nRankID)
+-- 	local szPatch = format("%s%s.ini", def_rank_data, GetAccount())
+-- 	local nRankTime = GetIniStr(szPatch, TBRankKey[nRankID][2], "TimeEnd") or ""
+-- 	--print(nRankID,nRankTime)
+-- 	if nRankTime ~= "" then
+-- 		print("IsExpire", IsExpire(nRankTime))
+-- 		if IsExpire(nRankTime) == 1 then
+-- 			local nTime = GetRemainMinutes(nRankTime)
+-- 			local nLevel = tonumber(GetIniStr(szPatch, TBRankKey[nRankID][2], "Level")) or
+-- 				20 --- giu logic cu. Ko co param thu3  la level 20
+-- 			local nSkillID = TBRankKey[nRankID][3];
+-- 			if (nRankID == 1) then
+-- 				local nHide = tonumber(GetIniStr(szPatch, TBRankKey[nRankID][2], "HideAura")) or 0;
+-- 				if (nHide == 1) then
+-- 					-- ?n vòng sáng 1693, dùng 2 skill g?c có s?n (976: 500 máu, 978: 5% kháng)
+-- 					AddSkillState(1693, 1, 1, 1);
+-- 					AddSkillState(976, 5, 1, nTime * 60 * 18);
+-- 					AddSkillState(978, 5, 1, nTime * 60 * 18);
+-- 					return
+-- 				else
+-- 					-- T?t 2 skill ?n, b?t l?i vòng sáng 1693
+-- 					AddSkillState(976, 1, 1, 1);
+-- 					AddSkillState(978, 1, 1, 1);
+-- 					nSkillID = 1693;
+-- 				end
+-- 			end
+-- 			SetCRTRank(nSkillID, nTime, nLevel)
+-- 		end
+-- 	end
+-- end
+
 function CheckAndLoadCtrRank(nRankID)
-	local szPatch = format("%s%s.ini", def_rank_data, GetAccount())
+	local szPatch = format("%s%s.ini",def_rank_data,GetAccount())
 	local nRankTime = GetIniStr(szPatch, TBRankKey[nRankID][2], "TimeEnd") or ""
 	--print(nRankID,nRankTime)
 	if nRankTime ~= "" then
 		if IsExpire(nRankTime) == 1 then
 			local nTime = GetRemainMinutes(nRankTime)
-			local nLevel = tonumber(GetIniStr(szPatch, TBRankKey[nRankID][2], "Level")) or
-				20 --- giu logic cu. Ko co param thu3  la level 20
-			local nSkillID = TBRankKey[nRankID][3];
-			if (nRankID == 1) then
-				local nHide = tonumber(GetIniStr(szPatch, TBRankKey[nRankID][2], "HideAura")) or 0;
-				if (nHide == 1) then
-					-- ?n vòng sáng 1693, dùng 2 skill g?c có s?n (976: 500 máu, 978: 5% kháng)
-					AddSkillState(1693, 1, 1, 1);
-					AddSkillState(976, 5, 1, nTime * 60 * 18);
-					AddSkillState(978, 5, 1, nTime * 60 * 18);
-					return
-				else
-					-- T?t 2 skill ?n, b?t l?i vòng sáng 1693
-					AddSkillState(976, 1, 1, 1);
-					AddSkillState(978, 1, 1, 1);
-					nSkillID = 1693;
-				end
-			end
-			SetCRTRank(nSkillID, nTime, nLevel)
+			local nLevel = tonumber(GetIniStr(szPatch, TBRankKey[nRankID][2], "Level")) or 20 --- giu logic cu. Ko co param thu3  la level 20
+			SetCRTRank(TBRankKey[nRankID][3],nTime,nLevel)
 		end
 	end
+	
 end
 
 -- function AddCRTRankBystr(nRankID,szTime)
